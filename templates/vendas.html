@@ -15,9 +15,26 @@
       name="description"
       content="Diagnose Grupos Geradores em Campo Grande - MS. Especialistas em vendas e suporte para geradores a diesel de alta performance. Autorizada MWM."
     />
+    <meta
+      property="og:title"
+      content="Venda de Geradores | Diagnose Grupos Geradores - MS"
+    />
+    <meta
+      property="og:description"
+      content="Diagnose Grupos Geradores em Campo Grande - MS. Especialistas em vendas e suporte para geradores a diesel de alta performance. Autorizada MWM."
+    />
+    <meta
+      property="og:image"
+      content="{{ url_for('static', filename='img/logo-dgg.png', _external=True) }}"
+    />
+    <meta property="og:type" content="website" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jura:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://cdn.tailwindcss.com" />
     <link
       rel="preload"
@@ -25,7 +42,10 @@
       href="{{ url_for('static', filename='img/gerador-agro.webp') }}"
     />
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/tailwind.css') }}" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/tailwind.css') }}"
+    />
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='css/style.css') }}?v=3"
@@ -76,7 +96,7 @@
         >
           <a
             href="/"
-            class="flex items-center space-x-4 focus:outline-none cursor-pointer"
+            class="flex items-center space-x-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70ab18] cursor-pointer"
           >
             <div
               class="h-16 lg:h-20 w-auto min-w-[80px] flex items-center justify-center bg-transparent"
@@ -119,7 +139,7 @@
             <button
               type="button"
               aria-label="Abrir menu de navegação"
-              class="flex items-center space-x-2 bg-[#002240] hover:bg-[#001528] text-white px-5 py-2.5 rounded-lg font-bold transition focus:outline-none border border-[#004b87]"
+              class="flex items-center space-x-2 bg-[#002240] hover:bg-[#001528] text-white px-5 py-2.5 rounded-lg font-bold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70ab18] border border-[#004b87]"
             >
               <i class="fa-solid fa-bars text-lg"></i>
               <span class="hidden sm:inline">Menu</span>
@@ -141,7 +161,7 @@
 
                 <div class="group/vendas relative border-b border-gray-100">
                   <button
-                    class="w-full px-5 py-4 font-bold text-[#003865] hover:bg-gray-50 flex justify-between items-center transition cursor-pointer focus:outline-none"
+                    class="w-full px-5 py-4 font-bold text-[#003865] hover:bg-gray-50 flex justify-between items-center transition cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70ab18]"
                   >
                     <span>Vendas</span>
                     <i
@@ -181,7 +201,7 @@
 
                 <div class="group/locacoes relative border-b border-gray-100">
                   <button
-                    class="w-full px-5 py-4 font-bold text-[#003865] hover:bg-gray-50 flex justify-between items-center transition cursor-pointer focus:outline-none"
+                    class="w-full px-5 py-4 font-bold text-[#003865] hover:bg-gray-50 flex justify-between items-center transition cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70ab18]"
                   >
                     <span>Locações</span>
                     <i

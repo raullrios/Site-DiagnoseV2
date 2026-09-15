@@ -13,9 +13,26 @@
       name="description"
       content="Locação estruturada de Grupos Geradores em Campo Grande - MS. Atendimento programado para obras, indústrias, clínicas e agronegócio."
     />
+    <meta
+      property="og:title"
+      content="Locação de Geradores | Diagnose Grupos Geradores - MS"
+    />
+    <meta
+      property="og:description"
+      content="Locação estruturada de Grupos Geradores em Campo Grande - MS. Atendimento programado para obras, indústrias, clínicas e agronegócio."
+    />
+    <meta
+      property="og:image"
+      content="{{ url_for('static', filename='img/logo-dgg.png', _external=True) }}"
+    />
+    <meta property="og:type" content="website" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jura:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://cdn.tailwindcss.com" />
     <link
       rel="preload"
@@ -77,7 +94,7 @@
         >
           <a
             href="/"
-            class="flex items-center space-x-4 focus:outline-none cursor-pointer"
+            class="flex items-center space-x-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70ab18] cursor-pointer"
           >
             <div
               class="h-16 lg:h-20 w-auto min-w-[80px] flex items-center justify-center bg-transparent"
@@ -108,7 +125,7 @@
             <button
               type="button"
               aria-label="Abrir menu de navegação"
-              class="flex items-center space-x-2 bg-[#568511] hover:bg-[#436b0b] text-white px-5 py-2.5 rounded-lg font-bold transition focus:outline-none border border-[#436b0b]"
+              class="flex items-center space-x-2 bg-[#568511] hover:bg-[#436b0b] text-white px-5 py-2.5 rounded-lg font-bold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70ab18] border border-[#436b0b]"
             >
               <i class="fa-solid fa-bars text-lg"></i>
               <span class="hidden sm:inline">Menu</span>
@@ -128,7 +145,7 @@
                 </a>
                 <div class="group/vendas relative border-b border-gray-100">
                   <button
-                    class="w-full px-5 py-4 font-bold text-[#70ab18] hover:bg-gray-50 flex justify-between items-center transition cursor-pointer focus:outline-none"
+                    class="w-full px-5 py-4 font-bold text-[#70ab18] hover:bg-gray-50 flex justify-between items-center transition cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70ab18]"
                   >
                     <span>Vendas</span>
                     <i
@@ -167,7 +184,7 @@
                 </div>
                 <div class="group/locacoes relative border-b border-gray-100">
                   <button
-                    class="w-full px-5 py-4 font-bold text-[#70ab18] hover:bg-gray-50 flex justify-between items-center transition cursor-pointer focus:outline-none"
+                    class="w-full px-5 py-4 font-bold text-[#70ab18] hover:bg-gray-50 flex justify-between items-center transition cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70ab18]"
                   >
                     <span>Locações</span>
                     <i
@@ -538,32 +555,49 @@
             </div>
 
             <!-- Painel de Vídeo (Formato Vertical/Smartphone) -->
-            <div class="mt-12 relative rounded-2xl overflow-hidden shadow-2xl bg-white border border-gray-200 flex flex-col md:flex-row h-auto md:h-[500px]">
-              
+            <div
+              class="mt-12 relative rounded-2xl overflow-hidden shadow-2xl bg-white border border-gray-200 flex flex-col md:flex-row h-auto md:h-[500px]"
+            >
               <!-- Coluna do Vídeo -->
-              <div class="w-full md:w-2/5 lg:w-1/3 relative bg-black h-[400px] md:h-full flex-shrink-0">
+              <div
+                class="w-full md:w-2/5 lg:w-1/3 relative bg-black h-[400px] md:h-full flex-shrink-0"
+              >
                 <video
                   autoplay
                   loop
                   muted
                   playsinline
+                  poster="{{ url_for('static', filename='img/locacao-obras.webp') }}"
                   class="w-full h-full object-contain"
                 >
-                  <source src="{{ url_for('static', filename='video/videomunck.mp4') }}" type="video/mp4" />
+                  <source
+                    src="{{ url_for('static', filename='video/videomunck.mp4') }}"
+                    type="video/mp4"
+                  />
                   Seu navegador não suporta a reprodução de vídeos.
                 </video>
               </div>
 
               <!-- Coluna do Texto -->
-              <div class="w-full md:w-3/5 lg:w-2/3 p-6 sm:p-10 lg:p-12 flex flex-col justify-center border-t-4 md:border-t-0 md:border-l-4 border-[#70ab18] bg-white">
-                <span class="text-xs font-bold tracking-widest text-[#70ab18] uppercase title-font">
+              <div
+                class="w-full md:w-3/5 lg:w-2/3 p-6 sm:p-10 lg:p-12 flex flex-col justify-center border-t-4 md:border-t-0 md:border-l-4 border-[#70ab18] bg-white"
+              >
+                <span
+                  class="text-xs font-bold tracking-widest text-[#70ab18] uppercase title-font"
+                >
                   Nossa Frota em Ação
                 </span>
-                <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mt-2">
+                <h3
+                  class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mt-2"
+                >
                   Logística e Operação Própria
                 </h3>
-                <p class="text-sm sm:text-base lg:text-lg text-gray-500 font-medium mt-3 leading-relaxed">
-                  Garantimos agilidade e segurança na entrega, instalação e manutenção de todos os equipamentos, com frota e equipe técnica 100% dedicadas à sua demanda.
+                <p
+                  class="text-sm sm:text-base lg:text-lg text-gray-500 font-medium mt-3 leading-relaxed"
+                >
+                  Garantimos agilidade e segurança na entrega, instalação e
+                  manutenção de todos os equipamentos, com frota e equipe
+                  técnica 100% dedicadas à sua demanda.
                 </p>
               </div>
             </div>
@@ -602,7 +636,7 @@
                       type="text"
                       id="loc-nome"
                       required
-                      class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 text-sm focus:ring-2 focus:ring-[#70ab18] focus:outline-none"
+                      class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 text-sm focus:ring-2 focus:ring-[#70ab18] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70ab18]"
                       placeholder="Ex: João Silva"
                     />
                   </div>
@@ -618,7 +652,7 @@
                       required
                       maxlength="18"
                       oninput="mascaraDocumento(this)"
-                      class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 text-sm focus:ring-2 focus:ring-[#70ab18] focus:outline-none"
+                      class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 text-sm focus:ring-2 focus:ring-[#70ab18] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70ab18]"
                       placeholder="000.000.000-00"
                     />
                   </div>
@@ -632,7 +666,7 @@
                       type="text"
                       id="loc-empresa"
                       required
-                      class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 text-sm focus:ring-2 focus:ring-[#70ab18] focus:outline-none"
+                      class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 text-sm focus:ring-2 focus:ring-[#70ab18] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70ab18]"
                       placeholder="Nome do seu empreendimento"
                     />
                   </div>
@@ -648,7 +682,7 @@
                       required
                       maxlength="15"
                       oninput="mascaraTelefone(this)"
-                      class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 text-sm focus:ring-2 focus:ring-[#70ab18] focus:outline-none"
+                      class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 text-sm focus:ring-2 focus:ring-[#70ab18] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70ab18]"
                       placeholder="(00) 00000-0000"
                     />
                   </div>
@@ -664,7 +698,7 @@
                     <textarea
                       id="loc-obs"
                       rows="3"
-                      class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 text-sm focus:ring-2 focus:ring-[#70ab18] focus:outline-none"
+                      class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 text-sm focus:ring-2 focus:ring-[#70ab18] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70ab18]"
                       placeholder="Caso já saiba, descreva sua necessidade..."
                     ></textarea>
                   </div>
