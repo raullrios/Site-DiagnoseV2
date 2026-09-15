@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Locação de Geradores | Diagnose Grupos Geradores - MS</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ url_for('static', filename='img/logo-dgg.png') }}"
+    />
+    <meta
+      name="description"
+      content="Locação estruturada de Grupos Geradores em Campo Grande - MS. Atendimento programado para obras, indústrias, clínicas e agronegócio."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+    <link
+      rel="preload"
+      as="image"
+      href="{{ url_for('static', filename='img/locacao-obras.webp') }}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/tailwind.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}?v=3"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    /></noscript>
+
+    <style>
+      #indicadores-dinamicos {
+        bottom: 48% !important;
+      }
+      @media (min-width: 640px) {
+        #indicadores-dinamicos {
+          bottom: 38% !important;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-50 text-gray-800 antialiased min-h-screen flex flex-col justify-between"
+    style="font-family: Arial, Helvetica, sans-serif"
+  >
+    <a
+      href="https://wa.me/5567999990000?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20loca%C3%A7%C3%A3o%20de%20geradores."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Fale Conosco no WhatsApp"
+      class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl transition z-50"
+    >
+      <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <div class="content-container flex-grow">
+      <header
+        class="fixed w-full bg-[#70ab18] shadow-lg z-50 border-b-2 border-gray-400"
+      >
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+        >
+          <a
+            href="/"
+            class="flex items-center space-x-4 focus:outline-none cursor-pointer"
+          >
+            <div
+              class="h-16 lg:h-20 w-auto min-w-[80px] flex items-center justify-center bg-transparent"
+            >
+              <img
+                src="{{ url_for('static', filename='img/logo-dgg.png') }}"
+                width="100"
+                height="80"
+                alt="Logo Diagnose"
+                class="h-full w-auto object-contain"
+              />
+            </div>
+            <div class="hidden sm:flex flex-col items-center justify-center">
+              <span
+                class="text-2xl lg:text-[28px] font-black tracking-tight text-white block uppercase leading-none"
+              >
+                Diagnose <span class="text-gray-500">Geradores</span>
+              </span>
+              <span
+                class="text-xs lg:text-sm font-bold tracking-wider text-white mt-1.5 block uppercase leading-none"
+              >
+                Locações conforme sua necessidade
+              </span>
+            </div>
+          </a>
+
+          <div class="relative group h-full flex items-center">
+            <button
+              type="button"
+              aria-label="Abrir menu de navegação"
+              class="flex items-center space-x-2 bg-[#568511] hover:bg-[#436b0b] text-white px-5 py-2.5 rounded-lg font-bold transition focus:outline-none border border-[#436b0b]"
+            >
+              <i class="fa-solid fa-bars text-lg"></i>
+              <span class="hidden sm:inline">Menu</span>
+            </button>
+            <div
+              class="absolute right-0 top-[60px] pt-4 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
+            >
+              <div
+                class="bg-white rounded-xl shadow-2xl border border-gray-200 overflow-visible text-gray-800"
+              >
+                <a
+                  href="/"
+                  class="w-full px-5 py-4 font-bold text-[#70ab18] hover:bg-gray-50 flex justify-between items-center transition border-b border-gray-100"
+                >
+                  <span>Página Inicial (Home)</span>
+                  <i class="fa-solid fa-house text-xs text-gray-400"></i>
+                </a>
+                <div class="group/vendas relative border-b border-gray-100">
+                  <button
+                    class="w-full px-5 py-4 font-bold text-[#70ab18] hover:bg-gray-50 flex justify-between items-center transition cursor-pointer focus:outline-none"
+                  >
+                    <span>Vendas</span>
+                    <i
+                      class="fa-solid fa-chevron-left text-xs text-gray-400 group-hover/vendas:-translate-x-1 transition-transform"
+                    ></i>
+                  </button>
+                  <div
+                    class="absolute right-[100%] top-0 mr-2 w-56 opacity-0 invisible group-hover/vendas:opacity-100 group-hover/vendas:visible transition-all duration-200 bg-white border border-gray-200 shadow-xl rounded-xl overflow-hidden"
+                  >
+                    <a
+                      href="/vendas"
+                      class="block w-full text-left px-5 py-3 text-sm font-black text-[#70ab18] bg-[#70ab18]/10 hover:bg-[#70ab18] hover:text-white transition border-b border-gray-200"
+                      >Ver Catálogo de Vendas</a
+                    >
+                    <a
+                      href="/vendas#mwm-catalogo"
+                      class="block w-full text-left px-5 py-3 text-sm font-semibold text-gray-600 hover:bg-[#70ab18] hover:text-white transition border-b border-gray-100"
+                      >40 kVA a 100 kVA</a
+                    >
+                    <a
+                      href="/vendas#mwm-catalogo"
+                      class="block w-full text-left px-5 py-3 text-sm font-semibold text-gray-600 hover:bg-[#003865] hover:text-white transition border-b border-gray-100"
+                      >125 kVA a 200 kVA</a
+                    >
+                    <a
+                      href="/vendas#mwm-catalogo"
+                      class="block w-full text-left px-5 py-3 text-sm font-semibold text-gray-600 hover:bg-[#003865] hover:text-white transition border-b border-gray-100"
+                      >260 kVA a 315 kVA</a
+                    >
+                    <a
+                      href="/vendas#mwm-catalogo"
+                      class="block w-full text-left px-5 py-3 text-sm font-semibold text-gray-600 hover:bg-[#003865] hover:text-white transition"
+                      >315 kVA a 1250 kVA</a
+                    >
+                  </div>
+                </div>
+                <div class="group/locacoes relative border-b border-gray-100">
+                  <button
+                    class="w-full px-5 py-4 font-bold text-[#70ab18] hover:bg-gray-50 flex justify-between items-center transition cursor-pointer focus:outline-none"
+                  >
+                    <span>Locações</span>
+                    <i
+                      class="fa-solid fa-chevron-left text-xs text-gray-400 group-hover/locacoes:-translate-x-1 transition-transform"
+                    ></i>
+                  </button>
+                  <div
+                    class="absolute right-[100%] top-0 mr-2 w-56 opacity-0 invisible group-hover/locacoes:opacity-100 group-hover/locacoes:visible transition-all duration-200 bg-white border border-gray-200 shadow-xl rounded-xl overflow-hidden"
+                  >
+                    <a
+                      href="/locacoes"
+                      class="block w-full text-left px-5 py-3 text-sm font-black text-[#70ab18] bg-[#70ab18]/10 hover:bg-[#70ab18] hover:text-white transition border-b border-gray-200"
+                      >Ver Todas as Locações</a
+                    >
+                  </div>
+                </div>
+                <a
+                  href="/sobre"
+                  class="w-full px-5 py-4 font-bold text-[#70ab18] hover:bg-gray-50 transition border-b border-gray-100 flex justify-between items-center"
+                >
+                  <span>Sobre a Empresa</span>
+                </a>
+                <a
+                  href="#cotacao"
+                  class="w-full px-5 py-4 font-black bg-[#70ab18] text-white hover:bg-[#568511] transition flex justify-between items-center rounded-b-xl"
+                >
+                  <span>Contato / Orçamento</span>
+                  <i class="fa-solid fa-file-invoice-dollar text-white-400"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="pt-32 pb-20 border-b border-gray-200 bg-white">
+          <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+          >
+            <div class="space-y-6 text-center lg:text-left">
+              <span
+                class="text-sm sm:text-base font-bold tracking-widest text-[#70ab18] uppercase border border-[#70ab18] px-4 py-1.5 rounded-full inline-block title-font"
+                >Divisão de Locação</span
+              >
+              <h1
+                class="text-3xl sm:text-5xl font-black text-gray-800 tracking-tight leading-tight"
+              >
+                Soluções para seu fornecimento de energia com
+                <span class="text-[#70ab18]">máxima eficiência</span>
+              </h1>
+              <p class="text-base sm:text-lg text-gray-600 font-medium">
+                Equipamentos prontos e revisados para apoiar sua demanda
+                energética. Atendemos canteiros de obras, parques industriais,
+                hospitais e agronegócio em todo o estado.
+              </p>
+              <div
+                class="flex flex-col sm:flex-row gap-4 pt-2 justify-center lg:justify-start"
+              >
+                <a
+                  href="#cotacao"
+                  class="bg-[#70ab18] text-white hover:bg-[#568511] text-center px-8 py-4 rounded-xl font-black shadow-lg transition text-sm sm:text-base border-b-4 border-[#568511]"
+                  >Solicitar Cotação de Locação</a
+                >
+              </div>
+            </div>
+
+            <!-- CARROSSEL -->
+            <div
+              class="relative rounded-2xl overflow-hidden shadow-2xl bg-white border border-gray-200 h-[450px] sm:h-[500px]"
+              id="carousel"
+            >
+              <div
+                class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-100 flex flex-col bg-white"
+              >
+                <div class="w-full h-[55%] sm:h-[65%] relative">
+                  <img
+                    src="{{ url_for('static', filename='img/locacao-obras.webp') }}"
+                    width="800"
+                    height="400"
+                    class="w-full h-full object-cover"
+                    alt="Obras e Construção"
+                  />
+                </div>
+                <div
+                  class="w-full h-[45%] sm:h-[35%] p-6 flex flex-col justify-center border-t-4 border-[#70ab18] bg-white"
+                >
+                  <span
+                    class="text-xs font-bold tracking-widest text-[#70ab18] uppercase title-font"
+                    >Obras & Construção</span
+                  >
+                  <h3 class="text-lg sm:text-xl font-bold text-gray-800 mt-1">
+                    Canteiros de Obras Civis
+                  </h3>
+                  <p class="text-xs sm:text-sm text-gray-500 font-medium mt-1">
+                    Foto: Obra da rota bioceânica em Porto Murtinho - MS.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-0 flex flex-col bg-white z-0"
+              >
+                <div class="w-full h-[55%] sm:h-[65%] relative">
+                  <img
+                    src="{{ url_for('static', filename='img/locacao-industria.webp') }}"
+                    loading="lazy"
+                    width="800"
+                    height="400"
+                    class="w-full h-full object-cover"
+                    alt="Infraestrutura Industrial"
+                  />
+                </div>
+                <div
+                  class="w-full h-[45%] sm:h-[35%] p-6 flex flex-col justify-center border-t-4 border-[#70ab18] bg-white"
+                >
+                  <span
+                    class="text-xs font-bold tracking-widest text-[#70ab18] uppercase title-font"
+                    >Infraestrutura Industrial</span
+                  >
+                  <h3 class="text-lg sm:text-xl font-bold text-gray-800 mt-1">
+                    Paradas de Manutenção e Usinas
+                  </h3>
+                  <p class="text-xs sm:text-sm text-gray-500 font-medium mt-1">
+                    Foto: Operação programada em indústria.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-0 flex flex-col bg-white z-0"
+              >
+                <div class="w-full h-[55%] sm:h-[65%] relative">
+                  <img
+                    src="{{ url_for('static', filename='img/tvmorena-nacoes.webp') }}"
+                    loading="lazy"
+                    width="800"
+                    height="400"
+                    class="w-full h-full object-cover"
+                    alt="Saúde e Condomínios"
+                  />
+                </div>
+                <div
+                  class="w-full h-[45%] sm:h-[35%] p-6 flex flex-col justify-center border-t-4 border-[#70ab18] bg-white"
+                >
+                  <span
+                    class="text-xs font-bold tracking-widest text-[#70ab18] uppercase title-font"
+                    >Backup para Atividades Sensíveis</span
+                  >
+                  <h3 class="text-lg sm:text-xl font-bold text-gray-800 mt-1">
+                    Operações de Emergência e Eventos.
+                  </h3>
+                  <p class="text-xs sm:text-sm text-gray-500 font-medium mt-1">
+                    Foto: Transmissões Ao Vivo.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-0 flex flex-col bg-white z-0"
+              >
+                <div class="w-full h-[55%] sm:h-[65%] relative">
+                  <img
+                    src="{{ url_for('static', filename='img/silo-atendimento.webp') }}"
+                    loading="lazy"
+                    width="800"
+                    height="400"
+                    class="w-full h-full object-cover"
+                    alt="Agronegócio e Safra"
+                  />
+                </div>
+                <div
+                  class="w-full h-[45%] sm:h-[35%] p-6 flex flex-col justify-center border-t-4 border-[#70ab18] bg-white"
+                >
+                  <span
+                    class="text-xs font-bold tracking-widest text-[#70ab18] uppercase title-font"
+                    >Agronegócio & Safra</span
+                  >
+                  <h3 class="text-lg sm:text-xl font-bold text-gray-800 mt-1">
+                    Pivôs de Irrigação e Secadores
+                  </h3>
+                  <p class="text-xs sm:text-sm text-gray-500 font-medium mt-1">
+                    Foto: Locação para secador de grãos na safra.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-0 flex flex-col bg-white z-0"
+              >
+                <div class="w-full h-[55%] sm:h-[65%] relative">
+                  <img
+                    src="{{ url_for('static', filename='img/locacao-scania3.webp') }}"
+                    loading="lazy"
+                    width="800"
+                    height="400"
+                    class="w-full h-full object-cover"
+                    alt="Agronegócio e Safra"
+                  />
+                </div>
+                <div
+                  class="w-full h-[45%] sm:h-[35%] p-6 flex flex-col justify-center border-t-4 border-[#70ab18] bg-white"
+                >
+                  <span
+                    class="text-xs font-bold tracking-widest text-[#70ab18] uppercase title-font"
+                    >Soluções para quem não pode parar</span
+                  >
+                  <h3 class="text-lg sm:text-xl font-bold text-gray-800 mt-1">
+                    Posto de Combustível
+                  </h3>
+                  <p class="text-xs sm:text-sm text-gray-500 font-medium mt-1">
+                    Foto: Locação Posto de Combustível.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="py-16 sm:py-24 bg-gray-50 border-b border-gray-200"
+          id="detalhes-locacao"
+        >
+          <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-10">
+            <h2
+              class="text-3xl sm:text-4xl font-black text-gray-800 title-font tracking-tight uppercase"
+            >
+              Locação sob Demanda
+            </h2>
+            <p class="text-gray-600 text-lg leading-relaxed mt-4 font-medium">
+              Planeje sua demanda energética conosco. Operamos exclusivamente
+              com Grupos Geradores a Diesel com potências de 22 kVA até 500 kVA.
+            </p>
+          </div>
+
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div
+                class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col"
+              >
+                <div class="h-48 overflow-hidden relative">
+                  <img
+                    src="{{ url_for('static', filename='img/locacao-predio2.webp') }}"
+                    width="400"
+                    height="300"
+                    class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                    alt="Canteiros de Obras"
+                    loading="lazy"
+                  />
+                </div>
+                <div
+                  class="p-6 flex-grow flex flex-col border-t-4 border-[#70ab18]"
+                >
+                  <div class="flex items-center space-x-3 mb-3">
+                    <div
+                      class="w-10 h-10 rounded bg-[#70ab18]/10 flex items-center justify-center text-[#70ab18] flex-shrink-0"
+                    >
+                      <i class="fa-solid fa-helmet-safety text-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800 text-lg leading-tight">
+                      Canteiros de Obras
+                    </h3>
+                  </div>
+                  <p class="text-sm text-gray-500 mt-auto font-medium">
+                    Locação estruturada por meses para maquinários pesados e
+                    infraestrutura.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col"
+              >
+                <div class="h-48 overflow-hidden relative">
+                  <img
+                    src="{{ url_for('static', filename='img/industria-gmg.webp') }}"
+                    width="400"
+                    height="300"
+                    class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                    alt="Plantas Industriais"
+                    loading="lazy"
+                  />
+                </div>
+                <div
+                  class="p-6 flex-grow flex flex-col border-t-4 border-[#70ab18]"
+                >
+                  <div class="flex items-center space-x-3 mb-3">
+                    <div
+                      class="w-10 h-10 rounded bg-[#70ab18]/10 flex items-center justify-center text-[#70ab18] flex-shrink-0"
+                    >
+                      <i class="fa-solid fa-industry text-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800 text-lg leading-tight">
+                      Plantas Industriais
+                    </h3>
+                  </div>
+                  <p class="text-sm text-gray-500 mt-auto font-medium">
+                    Energia ininterrupta para paradas de manutenção e linhas de
+                    produção.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col"
+              >
+                <div class="h-48 overflow-hidden relative">
+                  <img
+                    src="{{ url_for('static', filename='img/hospital-locacao.webp') }}"
+                    width="400"
+                    height="300"
+                    class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                    alt="Clínicas e Hospitais"
+                    loading="lazy"
+                  />
+                </div>
+                <div
+                  class="p-6 flex-grow flex flex-col border-t-4 border-[#70ab18]"
+                >
+                  <div class="flex items-center space-x-3 mb-3">
+                    <div
+                      class="w-10 h-10 rounded bg-[#70ab18]/10 flex items-center justify-center text-[#70ab18] flex-shrink-0"
+                    >
+                      <i class="fa-solid fa-hospital text-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800 text-lg leading-tight">
+                      Clínicas e Hospitais
+                    </h3>
+                  </div>
+                  <p class="text-sm text-gray-500 mt-auto font-medium">
+                    Máquinas atenuadas e seguras para garantir a operação de
+                    leitos.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col"
+              >
+                <div class="h-48 overflow-hidden relative">
+                  <img
+                    src="{{ url_for('static', filename='img/secador-locacao2.webp') }}"
+                    width="400"
+                    height="300"
+                    class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                    alt="Pivôs de Irrigação"
+                    loading="lazy"
+                  />
+                </div>
+                <div
+                  class="p-6 flex-grow flex flex-col border-t-4 border-[#70ab18]"
+                >
+                  <div class="flex items-center space-x-3 mb-3">
+                    <div
+                      class="w-10 h-10 rounded bg-[#70ab18]/10 flex items-center justify-center text-[#70ab18] flex-shrink-0"
+                    >
+                      <i class="fa-solid fa-wheat-awn text-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800 text-lg leading-tight">
+                      Pivôs de Irrigação e Safra
+                    </h3>
+                  </div>
+                  <p class="text-sm text-gray-500 mt-auto font-medium">
+                    Suporte para maquinários do campo em períodos críticos de
+                    colheita.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Painel de Vídeo (Formato Vertical/Smartphone) -->
+            <div class="mt-12 relative rounded-2xl overflow-hidden shadow-2xl bg-white border border-gray-200 flex flex-col md:flex-row h-auto md:h-[500px]">
+              
+              <!-- Coluna do Vídeo -->
+              <div class="w-full md:w-2/5 lg:w-1/3 relative bg-black h-[400px] md:h-full flex-shrink-0">
+                <video
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  class="w-full h-full object-contain"
+                >
+                  <source src="{{ url_for('static', filename='video/videomunck.mp4') }}" type="video/mp4" />
+                  Seu navegador não suporta a reprodução de vídeos.
+                </video>
+              </div>
+
+              <!-- Coluna do Texto -->
+              <div class="w-full md:w-3/5 lg:w-2/3 p-6 sm:p-10 lg:p-12 flex flex-col justify-center border-t-4 md:border-t-0 md:border-l-4 border-[#70ab18] bg-white">
+                <span class="text-xs font-bold tracking-widest text-[#70ab18] uppercase title-font">
+                  Nossa Frota em Ação
+                </span>
+                <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mt-2">
+                  Logística e Operação Própria
+                </h3>
+                <p class="text-sm sm:text-base lg:text-lg text-gray-500 font-medium mt-3 leading-relaxed">
+                  Garantimos agilidade e segurança na entrega, instalação e manutenção de todos os equipamentos, com frota e equipe técnica 100% dedicadas à sua demanda.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FORMULÁRIO DE ORÇAMENTO DE LOCAÇÃO -->
+        <section id="cotacao" class="py-16 sm:py-20 bg-white">
+          <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div
+              class="bg-gray-50 text-gray-800 rounded-3xl shadow-xl overflow-hidden border border-gray-200"
+            >
+              <div class="p-6 sm:p-12 space-y-6">
+                <div class="space-y-2 text-center sm:text-left">
+                  <h2 class="text-xl sm:text-3xl font-black text-[#70ab18]">
+                    Solicite a Cotação de Locação
+                  </h2>
+                  <p class="text-gray-600 text-xs sm:text-sm font-medium">
+                    Envie a sua demanda de prazo e potência. A nossa equipe
+                    retornará em breve.
+                  </p>
+                </div>
+
+                <form
+                  id="form-locacao"
+                  onsubmit="enviarLocacaoWpp(event)"
+                  class="grid grid-cols-1 sm:grid-cols-2 gap-4"
+                >
+                  <div>
+                    <label
+                      for="loc-nome"
+                      class="block text-xs font-bold text-gray-700 uppercase mb-1"
+                      >Nome / Responsável</label
+                    >
+                    <input
+                      type="text"
+                      id="loc-nome"
+                      required
+                      class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 text-sm focus:ring-2 focus:ring-[#70ab18] focus:outline-none"
+                      placeholder="Ex: João Silva"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="loc-doc"
+                      class="block text-xs font-bold text-gray-700 uppercase mb-1"
+                      >CPF / CNPJ</label
+                    >
+                    <input
+                      type="text"
+                      id="loc-doc"
+                      required
+                      maxlength="18"
+                      oninput="mascaraDocumento(this)"
+                      class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 text-sm focus:ring-2 focus:ring-[#70ab18] focus:outline-none"
+                      placeholder="000.000.000-00"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="loc-empresa"
+                      class="block text-xs font-bold text-gray-700 uppercase mb-1"
+                      >Empresa / Obra</label
+                    >
+                    <input
+                      type="text"
+                      id="loc-empresa"
+                      required
+                      class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 text-sm focus:ring-2 focus:ring-[#70ab18] focus:outline-none"
+                      placeholder="Nome do seu empreendimento"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="loc-wpp"
+                      class="block text-xs font-bold text-gray-700 uppercase mb-1"
+                      >WhatsApp</label
+                    >
+                    <input
+                      type="tel"
+                      id="loc-wpp"
+                      required
+                      maxlength="15"
+                      oninput="mascaraTelefone(this)"
+                      class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 text-sm focus:ring-2 focus:ring-[#70ab18] focus:outline-none"
+                      placeholder="(00) 00000-0000"
+                    />
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label
+                      for="loc-obs"
+                      class="block text-xs font-bold text-gray-700 uppercase mb-1"
+                      >Potência (kVA) e Prazo de Locação
+                      <span class="text-gray-400 normal-case font-normal"
+                        >(Opcional)</span
+                      ></label
+                    >
+                    <textarea
+                      id="loc-obs"
+                      rows="3"
+                      class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 text-sm focus:ring-2 focus:ring-[#70ab18] focus:outline-none"
+                      placeholder="Caso já saiba, descreva sua necessidade..."
+                    ></textarea>
+                  </div>
+                  <div class="sm:col-span-2 pt-2">
+                    <button
+                      type="submit"
+                      class="w-full bg-[#70ab18] text-white hover:bg-[#568511] py-4 rounded-xl font-black shadow-lg transition uppercase text-xs sm:text-sm"
+                    >
+                      Enviar Requisição via WhatsApp
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer
+      class="bg-[#132104] text-gray-300 border-t border-[#253d0b] pt-12 pb-8"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center sm:text-left mb-10 border-b border-[#253d0b] pb-8"
+        >
+          <div class="space-y-3">
+            <div
+              class="w-10 h-10 mx-auto sm:mx-0 bg-[#436b0b] rounded-full flex items-center justify-center text-white"
+            >
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <h4 class="font-bold text-white uppercase text-sm title-font">
+              Endereço Comercial
+            </h4>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Campo Grande - MS<br />Rua Alegrete, 1591, Bairro: Cel.
+              Antonino<br />CEP: 79010-800
+            </p>
+          </div>
+          <div class="space-y-3">
+            <div
+              class="w-10 h-10 mx-auto sm:mx-0 bg-[#436b0b] rounded-full flex items-center justify-center text-white"
+            >
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <h4 class="font-bold text-white uppercase text-sm title-font">
+              Central de Atendimento
+            </h4>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Comercial: (67) 99984-8200 / (67) 99982-2761 / (67) 3351-5278<br />Horário:
+              Seg a Sex, 07h30 às 17h30
+            </p>
+          </div>
+          <div class="space-y-3">
+            <div
+              class="w-10 h-10 mx-auto sm:mx-0 bg-[#436b0b] rounded-full flex items-center justify-center text-white"
+            >
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <h4 class="font-bold text-white uppercase text-sm title-font">
+              E-mail Corporativo
+            </h4>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              diagnosegmg@gmail.com
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col sm:flex-row items-center justify-between text-xs text-center sm:text-left"
+        >
+          <div
+            class="flex flex-col sm:flex-row space-y-1 sm:space-y-0 sm:space-x-3"
+          >
+            <span
+              class="font-bold text-white uppercase tracking-wider title-font"
+              >Diagnose Grupos Geradores</span
+            >
+            <span class="hidden sm:inline text-[#70ab18]">|</span>
+            <span>Consultor Autorizado MWM — Mato Grosso do Sul</span>
+          </div>
+          <div class="mt-4 sm:mt-0">
+            &copy; 2026 Diagnose Grupos Geradores. Todos os direitos reservados.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/script.js') }}?v=11"></script>
+  </body>
+</html>

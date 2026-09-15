@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre Nós | Diagnose Grupos Geradores - MS</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ url_for('static', filename='img/logo-dgg.png') }}"
+    />
+    <meta
+      name="description"
+      content="Conheça a história da Diagnose Grupos Geradores. Mais de 40 anos de tradição em soluções de energia no Mato Grosso do Sul."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/tailwind.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}?v=3"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    /></noscript>
+  </head>
+  <body
+    class="bg-gray-50 text-gray-800 antialiased min-h-screen flex flex-col justify-between"
+    style="font-family: Arial, Helvetica, sans-serif"
+  >
+    <a
+      href="https://wa.me/5567999990000?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20consultor."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Fale Conosco no WhatsApp"
+      class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl transition z-50"
+    >
+      <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <div class="content-container flex-grow">
+      <header
+        class="fixed w-full bg-[#70ab18] shadow-lg z-50 border-b-2 border-gray-400"
+      >
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+        >
+          <a
+            href="/"
+            class="flex items-center space-x-4 focus:outline-none cursor-pointer"
+          >
+            <div
+              class="h-16 lg:h-20 w-auto min-w-[80px] flex items-center justify-center bg-transparent"
+            >
+              <img
+                src="{{ url_for('static', filename='img/logo-dgg.png') }}"
+                width="100"
+                height="80"
+                alt="Logo Diagnose"
+                class="h-full w-auto object-contain"
+              />
+            </div>
+            <div class="hidden sm:flex flex-col items-center justify-center">
+              <span
+                class="text-2xl lg:text-[28px] font-black tracking-tight text-white block uppercase leading-none"
+              >
+                Diagnose <span class="text-gray-500">Geradores</span>
+              </span>
+              <span
+                class="text-xs lg:text-sm font-bold tracking-wider text-white mt-1.5 block uppercase leading-none"
+              >
+                Atendimento Personalizado
+              </span>
+            </div>
+          </a>
+
+          <div class="relative group h-full flex items-center">
+            <button
+              type="button"
+              aria-label="Abrir menu de navegação"
+              class="flex items-center space-x-2 bg-[#568511] hover:bg-[#436b0b] text-white px-5 py-2.5 rounded-lg font-bold transition focus:outline-none border border-[#436b0b]"
+            >
+              <i class="fa-solid fa-bars text-lg"></i>
+              <span class="hidden sm:inline">Menu</span>
+            </button>
+
+            <div
+              class="absolute right-0 top-[60px] pt-4 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
+            >
+              <div
+                class="bg-white rounded-xl shadow-2xl border border-gray-200 overflow-visible text-gray-800"
+              >
+                <a
+                  href="/"
+                  class="w-full px-5 py-4 font-bold text-[#70ab18] hover:bg-gray-50 flex justify-between items-center transition border-b border-gray-100"
+                >
+                  <span>Página Inicial (Home)</span>
+                  <i class="fa-solid fa-house text-xs text-gray-400"></i>
+                </a>
+
+                <div class="group/vendas relative border-b border-gray-100">
+                  <button
+                    class="w-full px-5 py-4 font-bold text-[#70ab18] hover:bg-gray-50 flex justify-between items-center transition cursor-pointer focus:outline-none"
+                  >
+                    <span>Vendas</span>
+                    <i
+                      class="fa-solid fa-chevron-left text-xs text-gray-400 group-hover/vendas:-translate-x-1 transition-transform"
+                    ></i>
+                  </button>
+                  <div
+                    class="absolute right-[100%] top-0 mr-2 w-56 opacity-0 invisible group-hover/vendas:opacity-100 group-hover/vendas:visible transition-all duration-200 bg-white border border-gray-200 shadow-xl rounded-xl overflow-hidden"
+                  >
+                    <a
+                      href="/vendas"
+                      class="block w-full text-left px-5 py-3 text-sm font-black text-[#70ab18] bg-[#70ab18]/10 hover:bg-[#70ab18] hover:text-white transition border-b border-gray-200"
+                      >Ver Catálogo de Vendas</a
+                    >
+                    <a
+                      href="/vendas#mwm-catalogo"
+                      class="block w-full text-left px-5 py-3 text-sm font-semibold text-gray-600 hover:bg-[#70ab18] hover:text-white transition border-b border-gray-100"
+                      >40 kVA a 100 kVA</a
+                    >
+                    <a
+                      href="/vendas#mwm-catalogo"
+                      class="block w-full text-left px-5 py-3 text-sm font-semibold text-gray-600 hover:bg-[#70ab18] hover:text-white transition border-b border-gray-100"
+                      >125 kVA a 200 kVA</a
+                    >
+                    <a
+                      href="/vendas#mwm-catalogo"
+                      class="block w-full text-left px-5 py-3 text-sm font-semibold text-gray-600 hover:bg-[#003865] hover:text-white transition border-b border-gray-100"
+                      >260 kVA a 315 kVA</a
+                    >
+                    <a
+                      href="/vendas#mwm-catalogo"
+                      class="block w-full text-left px-5 py-3 text-sm font-semibold text-gray-600 hover:bg-[#003865] hover:text-white transition"
+                      >315 kVA a 1250 kVA</a
+                    >
+                  </div>
+                </div>
+
+                <div class="group/locacoes relative border-b border-gray-100">
+                  <button
+                    class="w-full px-5 py-4 font-bold text-[#70ab18] hover:bg-gray-50 flex justify-between items-center transition cursor-pointer focus:outline-none"
+                  >
+                    <span>Locações</span>
+                    <i
+                      class="fa-solid fa-chevron-left text-xs text-gray-400 group-hover/locacoes:-translate-x-1 transition-transform"
+                    ></i>
+                  </button>
+                  <div
+                    class="absolute right-[100%] top-0 mr-2 w-56 opacity-0 invisible group-hover/locacoes:opacity-100 group-hover/locacoes:visible transition-all duration-200 bg-white border border-gray-200 shadow-xl rounded-xl overflow-hidden"
+                  >
+                    <a
+                      href="/locacoes"
+                      class="block w-full text-left px-5 py-3 text-sm font-black text-[#70ab18] bg-[#70ab18]/10 hover:bg-[#70ab18] hover:text-white transition border-b border-gray-200"
+                      >Ver Todas as Locações</a
+                    >
+                    <a
+                      href="/locacoes"
+                      class="block w-full text-left px-5 py-3 text-sm font-semibold text-gray-600 hover:bg-[#70ab18] hover:text-white transition border-b border-gray-100"
+                      >12,5 kVA a 27 kVA</a
+                    >
+                    <a
+                      href="/locacoes"
+                      class="block w-full text-left px-5 py-3 text-sm font-semibold text-gray-600 hover:bg-[#70ab18] hover:text-white transition border-b border-gray-100"
+                      >40 kVA a 100 kVA</a
+                    >
+                    <a
+                      href="/locacoes"
+                      class="block w-full text-left px-5 py-3 text-sm font-semibold text-gray-600 hover:bg-[#70ab18] hover:text-white transition border-b border-gray-100"
+                      >125 kVA a 200 kVA</a
+                    >
+                    <a
+                      href="/locacoes"
+                      class="block w-full text-left px-5 py-3 text-sm font-semibold text-gray-600 hover:bg-[#70ab18] hover:text-white transition"
+                      >260 kVA a 500 kVA</a
+                    >
+                  </div>
+                </div>
+
+                <a
+                  href="/sobre"
+                  class="w-full px-5 py-4 font-bold text-[#059669] bg-gray-50 transition border-b border-gray-100 flex justify-between items-center"
+                >
+                  <span>Sobre a Empresa</span>
+                  <i class="fa-solid fa-check text-xs text-[#059669]"></i>
+                </a>
+
+                <a
+                  href="/vendas#cotacao"
+                  class="w-full px-5 py-4 font-black bg-[#70ab18] text-white hover:bg-[#568511] transition flex justify-between items-center rounded-b-xl"
+                >
+                  <span>Contato / Orçamento</span>
+                  <i class="fa-solid fa-file-invoice-dollar text-white-400"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="pt-32 pb-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center space-y-4 mb-16">
+            <span
+              class="text-sm sm:text-base font-bold tracking-widest text-[#70ab18] uppercase border border-[#70ab18] px-4 py-1.5 rounded-full inline-block title-font"
+              >Nossa História</span
+            >
+            <h1
+              class="text-3xl sm:text-5xl font-black text-gray-800 tracking-tight leading-tight mt-4"
+            >
+              Mais de 40 Anos
+              <span class="text-[#70ab18]">Energizando o Estado</span>
+            </h1>
+          </div>
+
+          <div
+            class="space-y-6 text-base sm:text-lg text-gray-600 leading-relaxed font-medium text-justify bg-gray-50 p-8 sm:p-12 rounded-3xl border border-gray-200 shadow-sm"
+          >
+            <p>
+              Fundada com o propósito estrutural de assegurar a continuidade
+              energética em cenários de alta criticidade, a
+              <strong class="text-gray-800">Diagnose Grupos Geradores</strong>
+              consolidou uma trajetória de excelência operacional e suporte
+              técnico especializado trabalhando com várias montadoras de Grupos
+              Geradores a nível nacional. Atualmente somos consultores
+              autorizados MWM no mercado sul-mato-grossense.
+            </p>
+            <p>
+              Ao longo de mais de quatro décadas, acompanhamos ativamente o
+              crescimento do nosso estado. Crescemos junto com a expansão
+              industrial local e nos tornamos um parceiro estratégico e
+              indispensável para o fortalecimento do agronegócio regional,
+              fornecendo energia contínua e emergencial para quem não pode
+              parar.
+            </p>
+            <p>
+              Entendemos que um Grupo Gerador não é apenas um maquinário
+              operacional: é a garantia absoluta de que safras inteiras não
+              serão perdidas, obras não serão paralisadas, plantas industriais
+              continuarão operando em sua capacidade máxima e hospitais
+              atenderão em emergência a suas necessidades. Com uma equipe de
+              engenharia focada no dimensionamento exato da sua demanda,
+              entregamos soluções definitivas e confiáveis.
+            </p>
+          </div>
+
+          <div class="mt-16 text-center space-y-8">
+            <h2 class="text-xl sm:text-2xl font-bold text-gray-800 title-font">
+              Selecione o seu Setor de Atendimento
+            </h2>
+            <div
+              class="flex flex-col sm:flex-row items-center justify-center gap-6"
+            >
+              <a
+                href="/vendas"
+                class="w-full sm:w-1/2 bg-[#003865] hover:bg-[#002240] text-white py-5 rounded-2xl font-black shadow-xl transition uppercase text-sm sm:text-base border-b-4 border-[#001528] flex items-center justify-center gap-3"
+              >
+                <i class="fa-solid fa-handshake text-xl"></i> Divisão de Vendas
+              </a>
+              <a
+                href="/locacoes"
+                class="w-full sm:w-1/2 bg-[#70ab18] hover:bg-[#568511] text-white py-5 rounded-2xl font-black shadow-xl transition uppercase text-sm sm:text-base border-b-4 border-[#436b0b] flex items-center justify-center gap-3"
+              >
+                <i class="fa-solid fa-clock-rotate-left text-xl"></i> Divisão de
+                Locação
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer
+      class="bg-[#132104] text-gray-300 border-t border-[#253d0b] pt-12 pb-8"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center sm:text-left mb-10 border-b border-[#253d0b] pb-8"
+        >
+          <div class="space-y-3">
+            <div
+              class="w-10 h-10 mx-auto sm:mx-0 bg-[#436b0b] rounded-full flex items-center justify-center text-white"
+            >
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <h4 class="font-bold text-white uppercase text-sm title-font">
+              Endereço Comercial
+            </h4>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Campo Grande - MS<br />Rua Alegrete, 1591, Bairro: Cel.
+              Antonino<br />CEP: 79010-800
+            </p>
+          </div>
+          <div class="space-y-3">
+            <div
+              class="w-10 h-10 mx-auto sm:mx-0 bg-[#436b0b] rounded-full flex items-center justify-center text-white"
+            >
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <h4 class="font-bold text-white uppercase text-sm title-font">
+              Central de Atendimento
+            </h4>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Comercial: (67) 99984-8200 / (67) 99982-2761 / (67) 3351-5278<br />Horário:
+              Seg a Sex, 07h30 às 17h30
+            </p>
+          </div>
+          <div class="space-y-3">
+            <div
+              class="w-10 h-10 mx-auto sm:mx-0 bg-[#436b0b] rounded-full flex items-center justify-center text-white"
+            >
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <h4 class="font-bold text-white uppercase text-sm title-font">
+              E-mail Corporativo
+            </h4>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              diagnosegmg@gmail.com
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col sm:flex-row items-center justify-between text-xs text-center sm:text-left"
+        >
+          <div
+            class="flex flex-col sm:flex-row space-y-1 sm:space-y-0 sm:space-x-3"
+          >
+            <span
+              class="font-bold text-white uppercase tracking-wider title-font"
+              >Diagnose Grupos Geradores</span
+            >
+            <span class="hidden sm:inline text-[#70ab18]">|</span>
+            <span>Consultor Autorizado MWM — Mato Grosso do Sul</span>
+          </div>
+          <div class="mt-4 sm:mt-0">
+            &copy; 2026 Diagnose Grupos Geradores. Todos os direitos reservados.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/script.js') }}?v=11"></script>
+  </body>
+</html>
