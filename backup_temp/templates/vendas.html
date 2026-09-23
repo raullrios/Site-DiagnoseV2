@@ -1,0 +1,1695 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Diagnose Grupos Geradores | Consultor Autorizado MWM - Campo Grande MS
+    </title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ url_for('static', filename='img/logo-dgg.png') }}"
+    />
+    <meta
+      name="description"
+      content="Diagnose Grupos Geradores em Campo Grande - MS. Especialistas em vendas e suporte para geradores a diesel de alta performance. Autorizada MWM."
+    />
+    <meta
+      property="og:title"
+      content="Venda de Geradores | Diagnose Grupos Geradores - MS"
+    />
+    <meta
+      property="og:description"
+      content="Diagnose Grupos Geradores em Campo Grande - MS. Especialistas em vendas e suporte para geradores a diesel de alta performance. Autorizada MWM."
+    />
+    <meta
+      property="og:image"
+      content="{{ url_for('static', filename='img/logo-dgg.png', _external=True) }}"
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jura:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+    <link
+      rel="preload"
+      as="image"
+      href="{{ url_for('static', filename='img/gerador-agro.webp') }}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/tailwind.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}?v=3"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    /></noscript>
+
+    <style>
+      #indicadores-dinamicos {
+        bottom: 48% !important;
+      }
+      @media (min-width: 640px) {
+        #indicadores-dinamicos {
+          bottom: 38% !important;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-50 text-gray-800 antialiased min-h-screen flex flex-col justify-between"
+    style="font-family: Arial, Helvetica, sans-serif"
+  >
+    <a
+      href="https://wa.me/5567999990000?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20grupos%20geradores."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Fale Conosco no WhatsApp"
+      class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 z-50 group"
+    >
+      <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <div class="content-container flex-grow">
+      <header
+        class="fixed w-full bg-[#003865] shadow-lg z-50 border-b-2 border-gray-400"
+      >
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+        >
+          <a
+            href="/"
+            class="flex items-center space-x-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70ab18] cursor-pointer"
+          >
+            <div
+              class="h-16 lg:h-20 w-auto min-w-[80px] flex items-center justify-center bg-transparent"
+            >
+              <img
+                src="{{ url_for('static', filename='img/logo-dgg.png') }}"
+                width="100"
+                height="80"
+                alt="Logo Diagnose"
+                class="h-full w-auto object-contain"
+              />
+            </div>
+            <div class="hidden sm:flex flex-col items-center justify-center">
+              <span
+                class="text-2xl lg:text-[28px] font-black tracking-tight text-white block uppercase leading-none"
+              >
+                Diagnose <span class="text-[#70ab18]">Geradores</span>
+              </span>
+              <span
+                class="text-xs lg:text-sm font-bold tracking-wider text-white mt-1.5 block uppercase leading-none"
+              >
+                Consultor Autorizado MWM
+              </span>
+            </div>
+          </a>
+
+          <div
+            class="hidden md:flex h-16 lg:h-20 w-auto items-center justify-center overflow-hidden pl-2 lg:pl-4"
+          >
+            <img
+              src="{{ url_for('static', filename='img/logo-mwm.png') }}"
+              width="150"
+              height="80"
+              alt="Logo MWM"
+              class="h-full w-auto object-contain drop-shadow-md"
+            />
+          </div>
+
+          <div class="relative group h-full flex items-center">
+            <button
+              type="button"
+              aria-label="Abrir menu de navegação"
+              class="flex items-center space-x-2 bg-[#002240] hover:bg-[#001528] text-white px-5 py-2.5 rounded-lg font-bold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70ab18] border border-[#004b87]"
+            >
+              <i class="fa-solid fa-bars text-lg"></i>
+              <span class="hidden sm:inline">Menu</span>
+            </button>
+
+            <div
+              class="absolute right-0 top-[60px] pt-4 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
+            >
+              <div
+                class="bg-white rounded-xl shadow-2xl border border-gray-200 overflow-visible text-gray-800"
+              >
+                <a
+                  href="/"
+                  class="w-full px-5 py-4 font-bold text-[#003865] hover:bg-gray-50 flex justify-between items-center transition border-b border-gray-100"
+                >
+                  <span>Página Inicial (Home)</span>
+                  <i class="fa-solid fa-house text-xs text-gray-400"></i>
+                </a>
+
+                <div class="group/vendas relative border-b border-gray-100">
+                  <button
+                    class="w-full px-5 py-4 font-bold text-[#003865] hover:bg-gray-50 flex justify-between items-center transition cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70ab18]"
+                  >
+                    <span>Vendas</span>
+                    <i
+                      class="fa-solid fa-chevron-left text-xs text-gray-400 group-hover/vendas:-translate-x-1 transition-transform"
+                    ></i>
+                  </button>
+                  <div
+                    class="absolute right-[100%] top-0 mr-2 w-56 opacity-0 invisible group-hover/vendas:opacity-100 group-hover/vendas:visible transition-all duration-200 bg-white border border-gray-200 shadow-xl rounded-xl overflow-hidden"
+                  >
+                    <a
+                      href="/vendas"
+                      class="block w-full text-left px-5 py-3 text-sm font-black text-[#003865] bg-blue-50 hover:bg-[#003865] hover:text-white transition border-b border-gray-200"
+                      >Ver Catálogo de Vendas</a
+                    >
+                    <a
+                      href="/vendas#mwm-catalogo"
+                      class="block w-full text-left px-5 py-3 text-sm font-semibold text-gray-600 hover:bg-[#003865] hover:text-white transition border-b border-gray-100"
+                      >40 kVA a 100 kVA</a
+                    >
+                    <a
+                      href="/vendas#mwm-catalogo"
+                      class="block w-full text-left px-5 py-3 text-sm font-semibold text-gray-600 hover:bg-[#003865] hover:text-white transition border-b border-gray-100"
+                      >125 kVA a 200 kVA</a
+                    >
+                    <a
+                      href="/vendas#mwm-catalogo"
+                      class="block w-full text-left px-5 py-3 text-sm font-semibold text-gray-600 hover:bg-[#003865] hover:text-white transition border-b border-gray-100"
+                      >260 kVA a 315 kVA</a
+                    >
+                    <a
+                      href="/vendas#mwm-catalogo"
+                      class="block w-full text-left px-5 py-3 text-sm font-semibold text-gray-600 hover:bg-[#003865] hover:text-white transition"
+                      >315 kVA a 1250 kVA</a
+                    >
+                  </div>
+                </div>
+
+                <div class="group/locacoes relative border-b border-gray-100">
+                  <button
+                    class="w-full px-5 py-4 font-bold text-[#003865] hover:bg-gray-50 flex justify-between items-center transition cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70ab18]"
+                  >
+                    <span>Locações</span>
+                    <i
+                      class="fa-solid fa-chevron-left text-xs text-gray-400 group-hover/locacoes:-translate-x-1 transition-transform"
+                    ></i>
+                  </button>
+                  <div
+                    class="absolute right-[100%] top-0 mr-2 w-56 opacity-0 invisible group-hover/locacoes:opacity-100 group-hover/locacoes:visible transition-all duration-200 bg-white border border-gray-200 shadow-xl rounded-xl overflow-hidden"
+                  >
+                    <a
+                      href="/locacoes"
+                      class="block w-full text-left px-5 py-3 text-sm font-black text-[#003865] bg-blue-50 hover:bg-[#003865] hover:text-white transition border-b border-gray-200"
+                      >Ver Todas as Locações</a
+                    >
+                    <a
+                      href="/locacoes"
+                      class="block w-full text-left px-5 py-3 text-sm font-semibold text-gray-600 hover:bg-[#003865] hover:text-white transition border-b border-gray-100"
+                      >12,5 kVA a 27 kVA</a
+                    >
+                    <a
+                      href="/locacoes"
+                      class="block w-full text-left px-5 py-3 text-sm font-semibold text-gray-600 hover:bg-[#003865] hover:text-white transition border-b border-gray-100"
+                      >40 kVA a 100 kVA</a
+                    >
+                    <a
+                      href="/locacoes"
+                      class="block w-full text-left px-5 py-3 text-sm font-semibold text-gray-600 hover:bg-[#003865] hover:text-white transition border-b border-gray-100"
+                      >125 kVA a 200 kVA</a
+                    >
+                    <a
+                      href="/locacoes"
+                      class="block w-full text-left px-5 py-3 text-sm font-semibold text-gray-600 hover:bg-[#003865] hover:text-white transition"
+                      >260 kVA a 500 kVA</a
+                    >
+                  </div>
+                </div>
+
+                <a
+                  href="/sobre"
+                  class="block w-full px-5 py-4 font-bold text-[#003865] hover:bg-gray-50 transition border-b border-gray-100 flex justify-between items-center"
+                >
+                  <span>Sobre a Empresa</span>
+                </a>
+                <a
+                  href="/vendas#cotacao"
+                  class="w-full px-5 py-4 font-black bg-[#003865] text-white hover:bg-[#002240] transition flex justify-between items-center rounded-b-xl"
+                >
+                  <span>Contato / Orçamento</span>
+                  <i class="fa-solid fa-file-invoice-dollar text-white-400"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main id="view-home">
+        <section
+          id="inicio"
+          class="pt-32 pb-20 border-b border-gray-200 bg-white"
+        >
+          <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+          >
+            <div class="space-y-6 text-center lg:text-left">
+              <span
+                class="text-sm sm:text-base font-bold tracking-widest text-[#003865] uppercase border border-[#003865] px-4 py-1.5 rounded-full inline-block title-font"
+                >Divisão de Vendas</span
+              >
+              <h1
+                class="text-3xl sm:text-5xl font-black text-[#003865] tracking-tight leading-tight mt-4"
+              >
+                Energia emergencial e contínua dimensionada para as
+                <span class="text-[#004b87]">suas necessidades</span>
+              </h1>
+              <p
+                class="text-base sm:text-lg text-gray-600 max-w-xl mx-auto lg:mx-0 font-medium"
+              >
+                Especialistas em Grupos Geradores a Diesel de média e alta
+                potência. Vendas estratégicas para Agronegócio, Indústria,
+                Hospitais e Comércio.
+              </p>
+              <div
+                class="flex flex-col sm:flex-row gap-4 pt-2 justify-center lg:justify-start"
+              >
+                <a
+                  href="#cotacao"
+                  class="bg-[#003865] text-white hover:bg-[#002240] text-center px-8 py-4 rounded-xl font-black shadow-lg transition text-sm sm:text-base border-b-4 border-gray-500"
+                  >Consultoria Técnico-Comercial</a
+                >
+              </div>
+            </div>
+
+            <!-- CARROSSEL VENDAS -->
+            <div
+              class="relative rounded-2xl overflow-hidden shadow-2xl bg-white border border-gray-200 h-[450px] sm:h-[500px]"
+              id="carousel"
+            >
+              <div
+                class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-100 flex flex-col bg-white"
+              >
+                <div class="w-full h-[55%] sm:h-[65%] relative">
+                  <img
+                    src="{{ url_for('static', filename='img/gerador-agro.webp') }}"
+                    width="800"
+                    height="400"
+                    class="w-full h-full object-cover"
+                    alt="Agro"
+                  />
+                </div>
+                <div
+                  class="w-full h-[45%] sm:h-[35%] p-6 flex flex-col justify-center border-t-4 border-gray-500 bg-white"
+                >
+                  <span
+                    class="text-xs font-bold tracking-widest text-[#003865] uppercase title-font"
+                    >Agronegócio & Safra</span
+                  >
+                  <h3 class="text-lg sm:text-xl font-bold text-gray-800 mt-1">
+                    Geradores para Silos e Secadores
+                  </h3>
+                  <p class="text-xs sm:text-sm text-gray-500 font-medium mt-1">
+                    Equipamentos dimensionados para o trabalho pesado.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-0 flex flex-col bg-white z-0"
+              >
+                <div class="w-full h-[55%] sm:h-[65%] relative">
+                  <img
+                    src="{{ url_for('static', filename='img/gerador-industria.webp') }}"
+                    loading="lazy"
+                    width="800"
+                    height="400"
+                    class="w-full h-full object-cover"
+                    alt="Indústria"
+                  />
+                </div>
+                <div
+                  class="w-full h-[45%] sm:h-[35%] p-6 flex flex-col justify-center border-t-4 border-gray-500 bg-white"
+                >
+                  <span
+                    class="text-xs font-bold tracking-widest text-[#003865] uppercase title-font"
+                    >Infraestrutura Industrial</span
+                  >
+                  <h3 class="text-lg sm:text-xl font-bold text-gray-800 mt-1">
+                    Backup para Usinas e Fábricas
+                  </h3>
+                  <p class="text-xs sm:text-sm text-gray-500 font-medium mt-1">
+                    Energia ininterrupta para manter sua linha de produção
+                    sempre operante.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-0 flex flex-col bg-white z-0"
+              >
+                <div class="w-full h-[55%] sm:h-[65%] relative">
+                  <img
+                    src="{{ url_for('static', filename='img/gerador-clinica.webp') }}"
+                    loading="lazy"
+                    width="800"
+                    height="400"
+                    class="w-full h-full object-cover"
+                    alt="Clínicas"
+                  />
+                </div>
+                <div
+                  class="w-full h-[45%] sm:h-[35%] p-6 flex flex-col justify-center border-t-4 border-gray-500 bg-white"
+                >
+                  <span
+                    class="text-xs font-bold tracking-widest text-[#003865] uppercase title-font"
+                    >Clínicas & Condomínios</span
+                  >
+                  <h3 class="text-lg sm:text-xl font-bold text-gray-800 mt-1">
+                    Sistemas Supersilenciados de Uso Urbano.
+                  </h3>
+                  <p class="text-xs sm:text-sm text-gray-500 font-medium mt-1">
+                    Equipamentos atenuados garantindo conforto acústico e
+                    segurança para locais sensíveis.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="vendas"
+          class="py-16 sm:py-20 bg-gray-50 border-b border-gray-200"
+        >
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+              <h2
+                class="text-2xl sm:text-4xl font-black tracking-tight text-[#003865]"
+              >
+                Divisão de Vendas de Grupos Geradores
+              </h2>
+              <p class="text-base sm:text-lg text-gray-600 font-medium">
+                Comercializamos equipamentos de alta potência com motores MWM,
+                Volvo, Scania e MAN. Projetados para regimes severos contínuos e
+                emergenciais.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mt-12">
+              <div
+                class="bg-white border border-gray-200 rounded-2xl p-6 hover:border-[#003865] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              >
+                <div class="space-y-4">
+                  <div
+                    class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-[#003865] text-xl font-bold"
+                  >
+                    <i class="fa-solid fa-wheat-awn"></i>
+                  </div>
+                  <h3 class="text-xl font-bold text-[#003865]">Agronegócio</h3>
+                  <p class="text-sm text-gray-600">
+                    Sistemas confiáveis de energia para pivôs de irrigação,
+                    secadores de grãos e propriedades rurais.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-white border border-gray-200 rounded-2xl p-6 hover:border-[#003865] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              >
+                <div class="space-y-4">
+                  <div
+                    class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-[#003865] text-xl font-bold"
+                  >
+                    <i class="fa-solid fa-industry"></i>
+                  </div>
+                  <h3 class="text-xl font-bold text-[#003865]">Indústrias</h3>
+                  <p class="text-sm text-gray-600">
+                    Geradores cabinados com Quadros de Transferência Automática
+                    (QTA) para transição imediata.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-white border border-gray-200 rounded-2xl p-6 hover:border-[#003865] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              >
+                <div class="space-y-4">
+                  <div
+                    class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-[#003865] text-xl font-bold"
+                  >
+                    <i class="fa-solid fa-building"></i>
+                  </div>
+                  <h3 class="text-xl font-bold text-[#003865]">
+                    Urbano Estrutural
+                  </h3>
+                  <p class="text-sm text-gray-600">
+                    Projetos de engenharia e segurança energética atenuados em
+                    ruído para hospitais e clínicas.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TABELA INTEGRADA -->
+        <section
+          id="mwm-catalogo"
+          class="py-16 sm:py-20 bg-white border-b border-gray-200"
+        >
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div
+              class="flex flex-col md:flex-row md:items-end justify-between gap-4"
+            >
+              <div class="space-y-2">
+                <span
+                  class="text-xs font-bold tracking-widest text-[#003865] uppercase"
+                  >Catálogo Técnico Oficial</span
+                >
+                <h2 class="text-2xl sm:text-4xl font-bold text-[#003865]">
+                  Tabela de Geradores MWM à Venda
+                </h2>
+                <p class="text-gray-600 text-sm font-medium">
+                  Consulte os modelos disponíveis de 40 kVA a 1250 kVA.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="rounded-2xl border border-gray-200 bg-white shadow-xl relative overflow-hidden"
+            >
+              <div
+                class="overflow-x-auto overflow-y-auto max-h-[400px] w-full custom-scrollbar"
+              >
+                <table
+                  class="w-full text-left text-sm text-gray-700 min-w-[800px]"
+                >
+                  <thead
+                    class="bg-[#003865] text-white text-xs uppercase font-bold tracking-wider sticky top-0 z-20 shadow-md"
+                  >
+                    <tr>
+                      <th
+                        scope="col"
+                        class="px-6 py-4 border-r border-[#002240] text-center"
+                      >
+                        Potência Standby
+                      </th>
+                      <th
+                        scope="col"
+                        class="px-6 py-4 border-r border-[#002240] text-center"
+                      >
+                        Potência Prime
+                      </th>
+                      <th
+                        scope="col"
+                        class="px-6 py-4 border-r border-[#002240]"
+                      >
+                        Modelo
+                      </th>
+                      <th
+                        scope="col"
+                        class="px-6 py-4 border-r border-[#002240]"
+                      >
+                        Código
+                      </th>
+                      <th scope="col" class="px-6 py-4 text-center">Ação</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-gray-200" id="tabela-mwm-body">
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        40 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        36 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        229-3NAG
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        MGD40.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('40 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        55 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        50 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        D229-3TG
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        MGD55.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('55 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        75 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        68 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        D229-3TG1
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        MGD75.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('75 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        85 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        76 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        D229-3TCAG
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        MGD85.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('85 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        100 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        90 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        D229-3TCAG1
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        MGD100.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('100 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        125 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        112 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        Série 12-4.12TG
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        MGD125.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('125 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        150 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        136 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        Série 12-4.12TCAG
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        MGD150.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('150 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        170 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        150 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        Série 12-4.12TCAG1
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        MGD170.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('170 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        200 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        180 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        Série 12-4.12TCEG
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        MGD200.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('200 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        200 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        180 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        Série 6.12 TCEG1
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        MGDE200.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('200 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        260 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        240 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        Série 12-6.12 TCAG
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        MGD260.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('260 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        315 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        280 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        Série 12-6.12 TCEG
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        MGD315.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('315 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        360 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        328 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        DC09 072A 02-13
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        SGD360.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('360 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        400 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        365 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        DC09 072A 02-14
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        SGD400.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('400 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        450 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        413 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        DC09 072A 02-11
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        SGD450.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('450 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        450 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        413 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        TAD1343GE-B
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        VGD450.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('450 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        500 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        456 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        DC13 072A 02-12
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        SGD500.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('500 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        500 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        456 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        TAD1344/45GE-B
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        VGD500.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('500 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        550 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        500 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        DC13 072A 02-13
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        SGD550.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('550 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        550 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        500 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        TAD1346GE-B
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        VGD550.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('550 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        625 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        575 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        DC13 093A 02-75
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        SGD625.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('625 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        650 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        575 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        TAD1641GE-B
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        VGD650.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('650 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        650 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        600 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        DC13 093A 02-75
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        SGD650.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('650 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        680 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        620 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        TAD1642GE-B
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        VGD680.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('680 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        720 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        650 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        DC16 093A 02-54
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        SGD720.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('720 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        750 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        685 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        TWD1644GE
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        VGD750.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('750 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        770 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        700 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        DC16 078A 02-43
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        SGD770.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('770 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        800 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        728 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        DC16 072A 02-43
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        SGD800.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('800 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        800 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        730 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        TWD1645GE
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        VGD800.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('800 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-gray-500"
+                      >
+                        1250 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200 font-bold text-[#003865]"
+                      >
+                        1046 kVA
+                      </td>
+                      <td
+                        class="px-6 py-4 border-r border-gray-200 font-medium text-gray-600"
+                      >
+                        D2862 LE223
+                      </td>
+                      <td
+                        class="px-6 py-4 font-bold text-[#003865] border-r border-gray-200"
+                      >
+                        DGD1250.60
+                      </td>
+                      <td class="px-6 py-4 text-center">
+                        <button
+                          type="button"
+                          aria-label="Cotar"
+                          onclick="preencherCotacao('1250 kVA')"
+                          class="bg-[#003865] text-white hover:bg-[#002240] px-4 py-2 rounded-lg text-xs font-bold transition w-full"
+                        >
+                          Cotar Equipamento
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FORMULÁRIO DE ORÇAMENTO -->
+        <section id="cotacao" class="py-16 sm:py-20 bg-gray-50">
+          <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div
+              class="bg-white text-gray-800 rounded-3xl shadow-xl overflow-hidden border border-gray-200"
+            >
+              <div class="p-6 sm:p-12 space-y-6">
+                <div class="space-y-2 text-center sm:text-left">
+                  <h2 class="text-xl sm:text-3xl font-black text-[#003865]">
+                    Solicite seu Dimensionamento Técnico
+                  </h2>
+                  <p class="text-gray-600 text-xs sm:text-sm font-medium">
+                    Envie as especificações da sua planta para análise imediata.
+                  </p>
+                </div>
+
+                <form
+                  id="form-vendas"
+                  onsubmit="enviarVendaWpp(event)"
+                  class="grid grid-cols-1 sm:grid-cols-2 gap-4"
+                >
+                  <div>
+                    <label
+                      for="venda-nome"
+                      class="block text-xs font-bold text-[#003865] uppercase mb-1"
+                      >Nome Completo</label
+                    >
+                    <input
+                      type="text"
+                      id="venda-nome"
+                      required
+                      class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-300 text-sm focus:ring-2 focus:ring-[#003865] focus:outline-none"
+                      placeholder="Seu nome ou responsável técnico"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="venda-doc"
+                      class="block text-xs font-bold text-[#003865] uppercase mb-1"
+                      >CPF / CNPJ</label
+                    >
+                    <input
+                      type="text"
+                      id="venda-doc"
+                      required
+                      maxlength="18"
+                      oninput="mascaraDocumento(this)"
+                      class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-300 text-sm focus:ring-2 focus:ring-[#003865] focus:outline-none"
+                      placeholder="Apenas números"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="venda-empresa"
+                      class="block text-xs font-bold text-[#003865] uppercase mb-1"
+                      >Empresa / Fazenda</label
+                    >
+                    <input
+                      type="text"
+                      id="venda-empresa"
+                      required
+                      class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-300 text-sm focus:ring-2 focus:ring-[#003865] focus:outline-none"
+                      placeholder="Nome do seu empreendimento"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="venda-wpp"
+                      class="block text-xs font-bold text-[#003865] uppercase mb-1"
+                      >Contato (WhatsApp)</label
+                    >
+                    <input
+                      type="tel"
+                      id="venda-wpp"
+                      required
+                      maxlength="15"
+                      oninput="mascaraTelefone(this)"
+                      class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-300 text-sm focus:ring-2 focus:ring-[#003865] focus:outline-none"
+                      placeholder="Ex: (67) 99999-0000"
+                    />
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label
+                      for="venda-obs"
+                      class="block text-xs font-bold text-[#003865] uppercase mb-1"
+                      >Finalidade / Observações
+                      <span class="text-gray-400 normal-case font-normal"
+                        >(Opcional)</span
+                      ></label
+                    >
+                    <textarea
+                      id="venda-obs"
+                      rows="4"
+                      class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-300 text-sm focus:ring-2 focus:ring-[#003865] focus:outline-none"
+                      placeholder="Descreva brevemente a sua necessidade. Ex: Procuro um gerador para um secador de grãos em safra..."
+                    ></textarea>
+                  </div>
+                  <div class="sm:col-span-2 pt-2">
+                    <button
+                      type="submit"
+                      class="w-full bg-[#003865] text-white hover:bg-[#002240] py-4 rounded-xl font-black shadow-lg transition uppercase text-xs sm:text-sm"
+                    >
+                      Enviar Cotação via WhatsApp
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer
+      class="bg-[#002240] text-gray-300 border-t border-[#001528] pt-12 pb-8"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center sm:text-left mb-10 border-b border-[#003865] pb-8"
+        >
+          <div class="space-y-3">
+            <div
+              class="w-10 h-10 mx-auto sm:mx-0 bg-[#003865] rounded-full flex items-center justify-center text-gray-400"
+            >
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <h4 class="font-bold text-white uppercase text-sm title-font">
+              Endereço Comercial
+            </h4>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Campo Grande - MS<br />Rua Alegrete, 1591, Bairro: Cel.
+              Antonino<br />CEP: 79010-800
+            </p>
+          </div>
+          <div class="space-y-3">
+            <div
+              class="w-10 h-10 mx-auto sm:mx-0 bg-[#003865] rounded-full flex items-center justify-center text-gray-400"
+            >
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <h4 class="font-bold text-white uppercase text-sm title-font">
+              Central de Atendimento
+            </h4>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Comercial: (67) 99984-8200 / (67) 99982-2761 / (67) 3351-5278<br />Horário:
+              Seg a Sex, 07h30 às 17h30
+            </p>
+          </div>
+          <div class="space-y-3">
+            <div
+              class="w-10 h-10 mx-auto sm:mx-0 bg-[#003865] rounded-full flex items-center justify-center text-gray-400"
+            >
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <h4 class="font-bold text-white uppercase text-sm title-font">
+              E-mail Corporativo
+            </h4>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              diagnosegmg@gmail.com
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col sm:flex-row items-center justify-between text-xs text-center sm:text-left"
+        >
+          <div
+            class="flex flex-col sm:flex-row space-y-1 sm:space-y-0 sm:space-x-3"
+          >
+            <span
+              class="font-bold text-white uppercase tracking-wider title-font"
+              >Diagnose Grupos Geradores</span
+            >
+            <span class="hidden sm:inline text-[#004b87]">|</span>
+            <span>Consultor Autorizado MWM — Mato Grosso do Sul</span>
+          </div>
+          <div class="mt-4 sm:mt-0">
+            &copy; 2026 Diagnose Grupos Geradores. Todos os direitos reservados.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}?v=11"></script>
+    <script>
+      function preencherCotacao(potencia) {
+        const obsField = document.getElementById("venda-obs");
+        if (obsField) {
+          obsField.value = `Olá, gostaria de solicitar uma cotação para o equipamento de potência: ${potencia}.`;
+          document
+            .getElementById("cotacao")
+            .scrollIntoView({ behavior: "smooth", block: "start" });
+          setTimeout(() => document.getElementById("venda-nome").focus(), 500);
+        }
+      }
+    </script>
+  </body>
+</html>

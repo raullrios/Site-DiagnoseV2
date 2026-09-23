@@ -1,14 +1,24 @@
 {
-    "builds": [
+  "buildCommand": "pip install -r requirements.txt && python freeze.py",
+  "outputDirectory": "build",
+  "headers": [
+    {
+      "source": "/static/(.*)",
+      "headers": [
         {
-            "src": "app.py",
-            "use": "@vercel/python"
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
         }
-    ],
-    "routes": [
+      ]
+    },
+    {
+      "source": "/(.*)\\.html",
+      "headers": [
         {
-            "src": "/(.*)",
-            "dest": "app.py"
+          "key": "Cache-Control",
+          "value": "public, s-maxage=3600, max-age=300"
         }
-    ]
+      ]
+    }
+  ]
 }
