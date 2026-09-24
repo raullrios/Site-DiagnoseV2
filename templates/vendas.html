@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block head_preload %}
+<link rel="preload" as="image" href="{{ url_for('static', filename='img/gerador-locacao2.webp') }}">
+{% endblock %}
+
 {% block title %}Diagnose Grupos Geradores{% endblock %}
 
 {% block og %}
@@ -89,7 +93,7 @@
                     height="400"
                     class="w-full h-full object-cover"
                     alt="Agro"
-                  />
+                   loading="lazy" />
                 </div>
                 <div
                   class="w-full h-[45%] sm:h-[35%] p-6 flex flex-col justify-center border-t-4 border-gray-500 bg-white"

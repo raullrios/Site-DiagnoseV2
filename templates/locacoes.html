@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block head_preload %}
+<link rel="preload" as="image" href="{{ url_for('static', filename='img/hospital-locacao.webp') }}">
+{% endblock %}
+
 {% block title %}Locação de Geradores | Diagnose Grupos Geradores - MS{% endblock %}
 
 {% block og %}
@@ -79,7 +83,7 @@
                     height="400"
                     class="w-full h-full object-cover"
                     alt="Obras e Construção"
-                  />
+                   loading="lazy" />
                 </div>
                 <div
                   class="w-full h-[45%] sm:h-[35%] p-6 flex flex-col justify-center border-t-4 border-[#70ab18] bg-white"

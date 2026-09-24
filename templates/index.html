@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block head_preload %}
+<link rel="preload" as="image" href="{{ url_for('static', filename='img/gerador-industria.webp') }}">
+{% endblock %}
+
 {% block content %}
 <main class="flex-grow">
       <div
