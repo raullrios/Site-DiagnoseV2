@@ -105,11 +105,13 @@
       class="{% block header_classes %}absolute top-0 w-full z-50 bg-gradient-to-b from-black/80 via-black/40 to-transparent pt-2 pb-10{% endblock %}"
     >
       <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[80px] py-4 flex items-center justify-between"
+        class="max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 min-h-[80px] py-4 flex items-center justify-between gap-4"
       >
+        <!-- LOGO -->
         <a
           href="/"
-          class="flex items-center space-x-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70ab18] cursor-pointer"
+          class="flex-shrink-0 flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70ab18] cursor-pointer"
+          aria-label="Página Inicial"
         >
           <div
             class="{% block logo_classes %}h-16 lg:h-20{% endblock %} w-auto min-w-[80px] flex items-center justify-center bg-transparent"
@@ -122,24 +124,29 @@
               class="h-full w-auto object-contain"
             />
           </div>
-          <div class="hidden sm:flex flex-col items-center justify-center">
-            {% block header_logo_text %}
-            <span
-              class="text-2xl lg:text-[48px] font-black tracking-tight text-white block uppercase leading-none"
-            >
-              Diagnose Geradores
-            </span>
-            <span
-              class="text-sm md:text-base lg:text-lg font-bold tracking-wider text-white mt-1.5 block uppercase leading-none"
-            >
-              Consultor Grupos Geradores Autorizado MWM
-            </span>
-            {% endblock %}
-          </div>
+        </a>
+
+        <!-- TÍTULO -->
+        <a
+          href="/"
+          class="hidden sm:flex flex-col items-center justify-center text-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70ab18] cursor-pointer"
+        >
+          {% block header_logo_text %}
+          <span
+            class="text-2xl lg:text-[48px] font-black tracking-tight text-white block uppercase leading-none"
+          >
+            Diagnose Geradores
+          </span>
+          <span
+            class="text-sm md:text-base lg:text-lg font-bold tracking-wider text-white mt-1.5 block uppercase leading-none"
+          >
+            Consultor Grupos Geradores Autorizado MWM
+          </span>
+          {% endblock %}
         </a>
 
         <!-- MENU DROPDOWN -->
-        <div class="relative group h-full flex items-center">
+        <div class="flex-shrink-0 relative group h-full flex items-center">
           <button
             type="button"
             aria-label="Abrir menu de navegação"
