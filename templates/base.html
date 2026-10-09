@@ -111,7 +111,7 @@
           class="flex items-center space-x-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70ab18] cursor-pointer"
         >
           <div
-            class="h-16 lg:h-20 w-auto min-w-[80px] flex items-center justify-center bg-transparent"
+            class="{% block logo_classes %}h-16 lg:h-20{% endblock %} w-auto min-w-[80px] flex items-center justify-center bg-transparent"
           >
             <img
               src="{{ url_for('static', filename='img/logo-dgg.png') }}"
