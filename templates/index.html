@@ -4,6 +4,43 @@
 <link rel="preload" as="image" href="{{ url_for('static', filename='img/gerador-industria.webp') }}">
 {% endblock %}
 
+{% block logo_classes %}home-logo-gigante{% endblock %}
+
+{% block header_logo_text %}
+    <style>
+      /* FORÇA O TAMANHO GIGANTE NA HOME PAGE IGNORANDO O STYLE.CSS */
+      .home-title-gigante {
+        font-size: 32px !important;
+        line-height: 1.1 !important;
+      }
+      .home-logo-gigante {
+        height: 90px !important;
+      }
+      @media (min-width: 768px) {
+        .home-title-gigante {
+          font-size: 64px !important;
+        }
+        .home-logo-gigante {
+          height: 130px !important;
+        }
+      }
+      @media (min-width: 1024px) {
+        .home-title-gigante {
+          font-size: 84px !important;
+        }
+        .home-logo-gigante {
+          height: 170px !important;
+        }
+      }
+    </style>
+    <span class="home-title-gigante font-black tracking-tight text-white block uppercase">
+      Diagnose Geradores
+    </span>
+    <span class="text-xs md:text-base lg:text-lg font-bold tracking-wider text-white mt-2 block uppercase leading-none">
+      Consultor Grupos Geradores Autorizado MWM
+    </span>
+{% endblock %}
+
 {% block content %}
 <main class="flex-grow">
       <div

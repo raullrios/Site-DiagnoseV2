@@ -30,11 +30,12 @@
       content="{{ url_for('static', filename='img/logo-dgg.png', _external=True) }}"
     />
     <meta property="og:type" content="website" />
-    {% endblock %}
-
-    {% block head_preload %}{% endblock %}
+    {% endblock %} {% block head_preload %}{% endblock %}
     <!-- Pré-conexões de Performance -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/fonts.css') }}" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/fonts.css') }}"
+    />
     <link rel="preconnect" href="https://cdn.tailwindcss.com" />
 
     <!-- Otimização do LCP (Força o carregamento da 1ª imagem em WEBP) -->
@@ -104,14 +105,14 @@
       class="{% block header_classes %}absolute top-0 w-full z-50 bg-gradient-to-b from-black/80 via-black/40 to-transparent pt-2 pb-10{% endblock %}"
     >
       <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[80px] py-4 flex items-center justify-between"
       >
         <a
           href="/"
           class="flex items-center space-x-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70ab18] cursor-pointer"
         >
           <div
-            class="h-16 lg:h-20 w-auto min-w-[80px] flex items-center justify-center bg-transparent"
+            class="{% block logo_classes %}h-16 lg:h-20{% endblock %} w-auto min-w-[80px] flex items-center justify-center bg-transparent"
           >
             <img
               src="{{ url_for('static', filename='img/logo-dgg.png') }}"
@@ -331,6 +332,9 @@
         </div>
       </div>
     </footer>
-    <script src="{{ url_for('static', filename='js/script.js') }}?v=11" defer></script>
+    <script
+      src="{{ url_for('static', filename='js/script.js') }}?v=11"
+      defer
+    ></script>
   </body>
 </html>
