@@ -129,16 +129,16 @@
         <!-- TÍTULO -->
         <a
           href="/"
-          class="hidden sm:flex flex-col items-center justify-center text-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70ab18] cursor-pointer"
+          class="flex flex-col items-center justify-center text-center flex-1 min-w-0 px-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70ab18] cursor-pointer"
         >
           {% block header_logo_text %}
           <span
-            class="text-2xl lg:text-[48px] font-black tracking-tight text-white block uppercase leading-none"
+            class="text-[clamp(1.25rem,4vw,3rem)] font-black tracking-tight text-white block uppercase leading-none"
           >
             Diagnose Geradores
           </span>
           <span
-            class="text-sm md:text-base lg:text-lg font-bold tracking-wider text-white mt-1.5 block uppercase leading-none"
+            class="text-[clamp(0.65rem,1.5vw,1.125rem)] font-bold tracking-wider text-white mt-1.5 block uppercase leading-none"
           >
             Consultor Grupos Geradores Autorizado MWM
           </span>
@@ -150,7 +150,7 @@
           <button
             type="button"
             aria-label="Abrir menu de navegação"
-            class="{% block menu_btn_class %}flex items-center space-x-2 bg-[#70ab18]/70 hover:bg-[#70ab18]/90 text-white backdrop-blur-md px-5 py-2.5 rounded-lg font-bold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70ab18] border border-white/20 shadow-sm{% endblock %}"
+            class="{% block menu_btn_class %}flex items-center space-x-2 bg-[#70ab18] hover:bg-[#568511] text-white px-5 py-2.5 rounded-lg font-bold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70ab18] shadow-md{% endblock %}"
           >
             <i class="fa-solid fa-bars text-lg"></i>
             <span class="hidden sm:inline">Menu</span>

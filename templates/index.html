@@ -8,35 +8,19 @@
 
 {% block header_logo_text %}
     <style>
-      /* FORÇA O TAMANHO GIGANTE NA HOME PAGE IGNORANDO O STYLE.CSS */
+      /* S2: Fluid Typography - Tamanho Gigante Fluido */
       .home-title-gigante {
-        font-size: 32px !important;
+        font-size: clamp(24px, 5.5vw, 84px) !important;
         line-height: 1.1 !important;
       }
       .home-logo-gigante {
-        height: 90px !important;
-      }
-      @media (min-width: 768px) {
-        .home-title-gigante {
-          font-size: 64px !important;
-        }
-        .home-logo-gigante {
-          height: 130px !important;
-        }
-      }
-      @media (min-width: 1024px) {
-        .home-title-gigante {
-          font-size: 84px !important;
-        }
-        .home-logo-gigante {
-          height: 170px !important;
-        }
+        height: clamp(60px, 12vw, 170px) !important;
       }
     </style>
     <span class="home-title-gigante font-black tracking-tight text-white block uppercase">
       Diagnose Geradores
     </span>
-    <span class="text-xs md:text-base lg:text-lg font-bold tracking-wider text-white mt-2 block uppercase leading-none">
+    <span class="text-[clamp(0.7rem,2vw,1.125rem)] font-bold tracking-wider text-white mt-2 block uppercase leading-none">
       Consultor Grupos Geradores Autorizado MWM
     </span>
 {% endblock %}
@@ -130,13 +114,13 @@
           >
             <a
               href="/vendas"
-              class="w-full sm:w-1/2 bg-[#003865] hover:bg-[#002240] text-white py-5 rounded-2xl font-black shadow-xl transition uppercase text-sm sm:text-base border-b-4 border-[#001528] flex items-center justify-center gap-3"
+              class="w-full sm:w-1/2 bg-[#003865] hover:bg-[#002240] text-white py-5 rounded-2xl font-black shadow-xl transition uppercase text-sm sm:text-base border-b-4 border-[#001528] flex items-center justify-center gap-3 hover:-translate-y-1 hover:scale-[1.02] duration-300"
             >
               <i class="fa-solid fa-handshake text-xl"></i> Divisão de Vendas
             </a>
             <a
               href="/locacoes"
-              class="w-full sm:w-1/2 bg-[#70ab18] hover:bg-[#568511] text-white py-5 rounded-2xl font-black shadow-xl transition uppercase text-sm sm:text-base border-b-4 border-[#436b0b] flex items-center justify-center gap-3"
+              class="w-full sm:w-1/2 bg-[#70ab18] hover:bg-[#568511] text-white py-5 rounded-2xl font-black shadow-xl transition uppercase text-sm sm:text-base border-b-4 border-[#436b0b] flex items-center justify-center gap-3 hover:-translate-y-1 hover:scale-[1.02] duration-300"
             >
               <i class="fa-solid fa-clock-rotate-left text-xl"></i> Divisão de
               Locação
@@ -149,7 +133,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div
-              class="bg-white p-8 rounded-3xl shadow-sm border-t-4 border-[#003865] text-center hover:shadow-lg transition"
+              class="bg-white p-8 rounded-3xl shadow-sm border-t-4 border-[#003865] text-center transition hover:-translate-y-2 hover:shadow-2xl duration-300 scroll-reveal"
             >
               <div
                 class="w-16 h-16 mx-auto bg-blue-50 rounded-full flex items-center justify-center text-[#003865] mb-4"
@@ -169,7 +153,7 @@
               </p>
             </div>
             <div
-              class="bg-white p-8 rounded-3xl shadow-sm border-t-4 border-yellow-500 text-center hover:shadow-lg transition"
+              class="bg-white p-8 rounded-3xl shadow-sm border-t-4 border-yellow-500 text-center transition hover:-translate-y-2 hover:shadow-2xl duration-300 scroll-reveal"
             >
               <div
                 class="w-16 h-16 mx-auto bg-yellow-50 rounded-full flex items-center justify-center text-yellow-600 mb-4"
@@ -189,7 +173,7 @@
               </p>
             </div>
             <div
-              class="bg-white p-8 rounded-3xl shadow-sm border-t-4 border-[#70ab18] text-center hover:shadow-lg transition"
+              class="bg-white p-8 rounded-3xl shadow-sm border-t-4 border-[#70ab18] text-center transition hover:-translate-y-2 hover:shadow-2xl duration-300 scroll-reveal"
             >
               <div
                 class="w-16 h-16 mx-auto bg-green-50 rounded-full flex items-center justify-center text-[#70ab18] mb-4"

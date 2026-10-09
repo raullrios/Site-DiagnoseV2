@@ -106,33 +106,27 @@ img, video, canvas, svg {
         font-size: 0.85rem !important; 
     }
 
-    header a[href="/"] div.hidden { display: flex !important; }
-    header a[href="/"] { column-gap: 0.5rem !important; }
-    header a[href="/"] > div { margin-left: 0 !important; }
+}
 
-    header a[href="/"] div.h-12.min-w-\[80px\] {
-        height: 38px !important;
-        min-width: 55px !important;
-        padding: 2px !important;
-    }
+/* ========================================================
+   MODERNIZAÇÃO DA PÁGINA (SUGESTÕES 1 E 3)
+   ======================================================== */
 
-    header a[href="/"] div.border-l {
-        height: 35px !important;
-        padding-left: 0.5rem !important;
-        border-left-width: 1px !important;
-    }
+/* S1: View Transitions API (Navegação Suave) */
+@view-transition {
+    navigation: auto;
+}
 
-    header a[href="/"] div.flex-col > span:nth-child(1) {
-        font-size: 0.85rem !important; 
-        line-height: 1 !important;
-    }
-    header a[href="/"] div.flex-col > span:nth-child(2) {
-        font-size: 0.55rem !important; 
-        margin-top: 2px !important;
-        max-width: 125px !important; 
-        white-space: normal !important;
-    }
+/* S3: Scroll-Driven Animations */
+@keyframes reveal-up {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
-    header .relative.group > button > span { display: none !important; }
-    header .relative.group > button { padding: 0.5rem 0.6rem !important; }
+@supports (animation-timeline: view()) {
+    .scroll-reveal {
+        animation: reveal-up linear both;
+        animation-timeline: view();
+        animation-range: entry 10% cover 30%;
+    }
 }
