@@ -308,7 +308,7 @@
               >
                 <div class="h-48 overflow-hidden relative">
                   <img
-                    src="{{ url_for('static', filename='img/hospital-locacao.webp') }}"
+                    src="{{ url_for('static', filename='img/locacao-hospitaldourados.webp') }}"
                     width="400"
                     height="300"
                     class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
@@ -370,33 +370,13 @@
               </div>
             </div>
 
-            <!-- Painel de Vídeo (Formato Vertical/Smartphone) -->
+            <!-- Painel: Nossa Equipe em Ação (Vídeo e Imagem) -->
             <div
-              class="mt-12 relative rounded-2xl overflow-hidden shadow-2xl bg-white border border-gray-200 flex flex-col md:flex-row h-auto md:h-[500px]"
+              class="mt-14 relative rounded-3xl overflow-hidden shadow-xl bg-white border border-gray-200 p-6 sm:p-10 lg:p-12"
             >
-              <!-- Coluna do Vídeo -->
+              <!-- Cabeçalho do Texto Organizado -->
               <div
-                class="w-full md:w-2/5 lg:w-1/3 relative bg-black h-[400px] md:h-full flex-shrink-0"
-              >
-                <video
-                  autoplay
-                  loop
-                  muted
-                  playsinline
-                  poster="{{ url_for('static', filename='img/locacao-obras.webp') }}"
-                  class="w-full h-full object-contain"
-                >
-                  <source
-                    src="{{ url_for('static', filename='video/videomunck.mp4') }}"
-                    type="video/mp4"
-                  />
-                  Seu navegador não suporta a reprodução de vídeos.
-                </video>
-              </div>
-
-              <!-- Coluna do Texto -->
-              <div
-                class="w-full md:w-3/5 lg:w-2/3 p-6 sm:p-10 lg:p-12 flex flex-col justify-center border-t-4 md:border-t-0 md:border-l-4 border-[#70ab18] bg-white"
+                class="border-l-4 border-[#70ab18] pl-5 sm:pl-6 mb-8 sm:mb-10"
               >
                 <span
                   class="text-xs font-bold tracking-widest text-[#70ab18] uppercase title-font"
@@ -404,16 +384,53 @@
                   Nossa Equipe em Ação
                 </span>
                 <h3
-                  class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mt-2"
+                  class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mt-1"
                 >
                   Operação Própria
                 </h3>
                 <p
-                  class="text-sm sm:text-base lg:text-lg text-gray-500 font-medium mt-3 leading-relaxed"
+                  class="text-sm sm:text-base lg:text-lg text-gray-500 font-medium mt-2 max-w-3xl leading-relaxed"
                 >
                   Garantimos agilidade e segurança na entrega, com equipamentos
                   de qualidade e equipe capacitada 100% dedicada à sua demanda.
                 </p>
+              </div>
+
+              <!-- Mídias Lado a Lado (Vídeo + Imagem) -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                <!-- Coluna do Vídeo -->
+                <div
+                  class="relative bg-black rounded-2xl overflow-hidden shadow-md h-[380px] sm:h-[460px] md:h-[480px] flex items-center justify-center"
+                >
+                  <video
+                    autoplay
+                    loop
+                    muted
+                    playsinline
+                    poster="{{ url_for('static', filename='img/locacao-obras.webp') }}"
+                    class="w-full h-full object-contain"
+                  >
+                    <source
+                      src="{{ url_for('static', filename='video/videomunck.mp4') }}"
+                      type="video/mp4"
+                    />
+                    Seu navegador não suporta a reprodução de vídeos.
+                  </video>
+                </div>
+
+                <!-- Coluna da Imagem -->
+                <div
+                  class="relative rounded-2xl overflow-hidden shadow-md h-[380px] sm:h-[460px] md:h-[480px] bg-gray-100 group border border-gray-100"
+                >
+                  <img
+                    src="{{ url_for('static', filename='img/locacao-obralog.webp') }}"
+                    alt="Nossa Equipe em Ação - Diagnose Grupos Geradores"
+                    width="800"
+                    height="600"
+                    class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </div>
           </div>
