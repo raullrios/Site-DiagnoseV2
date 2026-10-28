@@ -1,249 +1,230 @@
-{% extends 'base.html' %}
-
-{% block head_preload %}
-<link rel="preload" as="image" href="{{ url_for('static', filename='img/gerador-industria.webp') }}">
-{% endblock %}
-
-{% block logo_classes %}home-logo-gigante{% endblock %}
-
-{% block header_logo_text %}
-    <style>
-      /* S2: Fluid Typography - Tamanho Gigante Fluido */
-      .home-title-gigante {
-        font-size: clamp(24px, 5.5vw, 84px) !important;
-        line-height: 1.1 !important;
-      }
-      .home-logo-gigante {
-        height: clamp(60px, 12vw, 170px) !important;
-      }
-    </style>
-    <span class="home-title-gigante font-black tracking-tight text-white block uppercase">
-      Diagnose Grupos Geradores
-    </span>
-    <span class="text-[clamp(0.7rem,2vw,1.125rem)] font-bold tracking-wider text-white mt-2 block uppercase leading-none">
-      Consultor Autorizado MWM
-    </span>
-{% endblock %}
-
-{% block content %}
+{% extends 'base.html' %} {% block head_preload %}
+<link
+  rel="preload"
+  as="image"
+  href="{{ url_for('static', filename='img/gerador-industria.webp') }}"
+/>
+{% endblock %} {% block logo_classes %}home-logo-gigante{% endblock %} {% block
+header_logo_text %}
+<style>
+  /* S2: Fluid Typography - Tamanho Gigante Fluido */
+  .home-title-gigante {
+    font-size: clamp(24px, 5.5vw, 84px) !important;
+    line-height: 1.1 !important;
+  }
+  .home-logo-gigante {
+    height: clamp(60px, 12vw, 170px) !important;
+  }
+</style>
+<span
+  class="home-title-gigante font-black tracking-tight text-white block uppercase"
+>
+  Diagnose Grupos Geradores
+</span>
+<span
+  class="text-[clamp(0.7rem,2vw,1.125rem)] font-bold tracking-wider text-white mt-2 block uppercase leading-none"
+>
+  Consultor Autorizado MWM
+</span>
+{% endblock %} {% block content %}
 <main class="flex-grow">
+  <div
+    class="relative w-full h-[90vh] lg:min-h-[900px] bg-gray-900 overflow-hidden"
+    id="carousel"
+  >
+    <div
+      class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-100"
+    >
+      <!-- WEBP IMPLEMENTADO AQUI -->
       <div
-        class="relative w-full h-[90vh] lg:min-h-[900px] bg-gray-900 overflow-hidden"
-        id="carousel"
+        class="absolute inset-0 bg-cover bg-top"
+        style="background-image: url('{{ url_for('static', filename='img/gerador-industria.webp') }}');"
+      ></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-[#132104]/90 via-black/20 to-transparent"
+      ></div>
+      <div
+        class="absolute bottom-16 lg:bottom-40 left-0 w-full p-8 sm:p-16 max-w-7xl mx-auto z-10"
       >
-        <div
-          class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-100"
+        <span
+          class="text-blue-400 font-bold tracking-widest uppercase text-xs sm:text-sm title-font"
+          >Divisão de Vendas</span
         >
-          <!-- WEBP IMPLEMENTADO AQUI -->
-          <div
-            class="absolute inset-0 bg-cover bg-top"
-            style="background-image: url('{{ url_for('static', filename='img/gerador-industria.webp') }}');"
-          ></div>
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-[#132104]/90 via-black/20 to-transparent"
-          ></div>
-          <div
-            class="absolute bottom-16 lg:bottom-40 left-0 w-full p-8 sm:p-16 max-w-7xl mx-auto z-10"
-          >
-            <span
-              class="text-blue-400 font-bold tracking-widest uppercase text-xs sm:text-sm title-font"
-              >Divisão de Vendas</span
-            >
-            <h1
-              class="text-3xl sm:text-5xl lg:text-6xl font-black text-white mt-2 title-font"
-            >
-              Energia MWM para o seu Negócio
-            </h1>
-            <p
-              class="text-gray-300 mt-2 max-w-xl text-sm sm:text-base lg:text-lg"
-            >
-              Grupos Geradores diretos de fábrica conforme sua necessidade.
-              Garanta a continuidade operacional da sua indústria ou
-              agronegócio.
-            </p>
-          </div>
-        </div>
+        <h1
+          class="text-3xl sm:text-5xl lg:text-6xl font-black text-white mt-2 title-font"
+        >
+          Energia para o seu Negócio
+        </h1>
+        <p class="text-gray-300 mt-2 max-w-xl text-sm sm:text-base lg:text-lg">
+          Grupos Geradores MWM diretos de fábrica conforme sua necessidade.
+          Garanta a continuidade operacional da sua indústria ou agronegócio.
+        </p>
+      </div>
+    </div>
 
+    <div
+      class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-0"
+    >
+      <div
+        class="absolute inset-0 bg-cover bg-top"
+        style="background-image: url('{{ url_for('static', filename='img/hospital-locacao.webp') }}');"
+      ></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-[#436b0b]/90 via-black/20 to-transparent"
+      ></div>
+      <div
+        class="absolute bottom-16 lg:bottom-40 left-0 w-full p-8 sm:p-16 max-w-7xl mx-auto z-10"
+      >
+        <span
+          class="text-[#70ab18] font-bold tracking-widest uppercase text-xs sm:text-sm title-font"
+          >Divisão de Locação</span
+        >
+        <h2
+          class="text-3xl sm:text-5xl lg:text-6xl font-black text-white mt-2 title-font"
+        >
+          Locação sob Demanda
+        </h2>
+        <p class="text-gray-300 mt-2 max-w-xl text-sm sm:text-base lg:text-lg">
+          Equipamentos revisados e prontos para apoiar sua necessidade
+          energética e infraestrutura pelo tempo exato que você precisar.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2
+        class="text-3xl sm:text-4xl font-black text-[#003865] title-font mb-6"
+      >
+        Soluções Completas em Energia
+      </h2>
+      <p class="text-gray-600 text-lg leading-relaxed mb-12 font-medium">
+        A <strong class="text-gray-800">Diagnose Grupos Geradores</strong> é uma
+        empresa com mais de 40 anos no MS. Entregamos energia segura com
+        máquinas próprias, suporte técnico e agilidade quando você mais precisa.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+        <a
+          href="/vendas"
+          class="w-full sm:w-1/2 bg-[#003865] hover:bg-[#002240] text-white py-5 rounded-2xl font-black shadow-xl transition uppercase text-sm sm:text-base border-b-4 border-[#001528] flex items-center justify-center gap-3 hover:-translate-y-1 hover:scale-[1.02] duration-300"
+        >
+          <i class="fa-solid fa-handshake text-xl"></i> Divisão de Vendas
+        </a>
+        <a
+          href="/locacoes"
+          class="w-full sm:w-1/2 bg-[#70ab18] hover:bg-[#568511] text-white py-5 rounded-2xl font-black shadow-xl transition uppercase text-sm sm:text-base border-b-4 border-[#436b0b] flex items-center justify-center gap-3 hover:-translate-y-1 hover:scale-[1.02] duration-300"
+        >
+          <i class="fa-solid fa-clock-rotate-left text-xl"></i> Divisão de
+          Locação
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50 border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div
-          class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-0"
+          class="bg-white p-8 rounded-3xl shadow-sm border-t-4 border-[#003865] text-center transition hover:-translate-y-2 hover:shadow-2xl duration-300 scroll-reveal"
         >
           <div
-            class="absolute inset-0 bg-cover bg-top"
-            style="background-image: url('{{ url_for('static', filename='img/hospital-locacao.webp') }}');"
-          ></div>
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-[#436b0b]/90 via-black/20 to-transparent"
-          ></div>
-          <div
-            class="absolute bottom-16 lg:bottom-40 left-0 w-full p-8 sm:p-16 max-w-7xl mx-auto z-10"
+            class="w-16 h-16 mx-auto bg-blue-50 rounded-full flex items-center justify-center text-[#003865] mb-4"
           >
-            <span
-              class="text-[#70ab18] font-bold tracking-widest uppercase text-xs sm:text-sm title-font"
-              >Divisão de Locação</span
-            >
-            <h2
-              class="text-3xl sm:text-5xl lg:text-6xl font-black text-white mt-2 title-font"
-            >
-              Locação sob Demanda
-            </h2>
-            <p
-              class="text-gray-300 mt-2 max-w-xl text-sm sm:text-base lg:text-lg"
-            >
-              Equipamentos revisados e prontos para apoiar sua necessidade
-              energética e infraestrutura pelo tempo exato que você precisar.
-            </p>
+            <i class="fa-solid fa-bullseye text-2xl"></i>
           </div>
+          <h3 class="text-xl font-bold text-gray-800 title-font uppercase mb-3">
+            Missão
+          </h3>
+          <p
+            class="text-gray-600 text-justify text-sm leading-relaxed font-medium"
+          >
+            Ser o canal seguro de energia para que nossos clientes cresçam e
+            prosperem sem interrupções.
+          </p>
+        </div>
+        <div
+          class="bg-white p-8 rounded-3xl shadow-sm border-t-4 border-yellow-500 text-center transition hover:-translate-y-2 hover:shadow-2xl duration-300 scroll-reveal"
+        >
+          <div
+            class="w-16 h-16 mx-auto bg-yellow-50 rounded-full flex items-center justify-center text-yellow-600 mb-4"
+          >
+            <i class="fa-solid fa-eye text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 title-font uppercase mb-3">
+            Visão
+          </h3>
+          <p
+            class="text-gray-600 text-justify text-sm leading-relaxed font-medium"
+          >
+            Permanecer por muitos anos como parceiro no fornecimento de energia
+            confiável para as empresas do MS.
+          </p>
+        </div>
+        <div
+          class="bg-white p-8 rounded-3xl shadow-sm border-t-4 border-[#70ab18] text-center transition hover:-translate-y-2 hover:shadow-2xl duration-300 scroll-reveal"
+        >
+          <div
+            class="w-16 h-16 mx-auto bg-green-50 rounded-full flex items-center justify-center text-[#70ab18] mb-4"
+          >
+            <i class="fa-solid fa-handshake text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 title-font uppercase mb-5">
+            Valores
+          </h3>
+          <ul
+            class="text-justify text-gray-600 text-sm leading-relaxed font-medium space-y-3"
+          >
+            <li class="flex items-start">
+              <span class="text-[#70ab18] font-bold mr-2 text-lg leading-none"
+                >•</span
+              ><span
+                ><strong class="text-gray-800">Confiabilidade:</strong> Há mais
+                de 40 anos cumprindo o que promete.</span
+              >
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#70ab18] font-bold mr-2 text-lg leading-none"
+                >•</span
+              ><span
+                ><strong class="text-gray-800">Agilidade:</strong> Rapidez e
+                solicitude quando o cliente mais precisa.</span
+              >
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#70ab18] font-bold mr-2 text-lg leading-none"
+                >•</span
+              ><span
+                ><strong class="text-gray-800">Proximidade:</strong> Atendimento
+                próximo, de quem é daqui e conhece a realidade local.</span
+              >
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#70ab18] font-bold mr-2 text-lg leading-none"
+                >•</span
+              ><span
+                ><strong class="text-gray-800"
+                  >Responsabilidade Técnica:</strong
+                >
+                Equipamentos revisados e equipe qualificada com engenheiro
+                eletricista responsável técnico registrado no CREA-MS e Corpo de
+                Bombeiros.</span
+              >
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#70ab18] font-bold mr-2 text-lg leading-none"
+                >•</span
+              ><span
+                ><strong class="text-gray-800"
+                  >Compromisso com o Cliente:</strong
+                >
+                O sucesso do cliente é o nosso propósito.</span
+              >
+            </li>
+          </ul>
         </div>
       </div>
-
-      <section class="py-16 sm:py-24 bg-white">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2
-            class="text-3xl sm:text-4xl font-black text-[#003865] title-font mb-6"
-          >
-            Soluções Completas em Energia
-          </h2>
-          <p class="text-gray-600 text-lg leading-relaxed mb-12 font-medium">
-            A <strong class="text-gray-800">Diagnose Grupos Geradores</strong> é
-            uma empresa com mais de 40 anos no MS. Entregamos energia segura com
-            máquinas próprias, suporte técnico e agilidade quando você mais
-            precisa.
-          </p>
-          <div
-            class="flex flex-col sm:flex-row items-center justify-center gap-6"
-          >
-            <a
-              href="/vendas"
-              class="w-full sm:w-1/2 bg-[#003865] hover:bg-[#002240] text-white py-5 rounded-2xl font-black shadow-xl transition uppercase text-sm sm:text-base border-b-4 border-[#001528] flex items-center justify-center gap-3 hover:-translate-y-1 hover:scale-[1.02] duration-300"
-            >
-              <i class="fa-solid fa-handshake text-xl"></i> Divisão de Vendas
-            </a>
-            <a
-              href="/locacoes"
-              class="w-full sm:w-1/2 bg-[#70ab18] hover:bg-[#568511] text-white py-5 rounded-2xl font-black shadow-xl transition uppercase text-sm sm:text-base border-b-4 border-[#436b0b] flex items-center justify-center gap-3 hover:-translate-y-1 hover:scale-[1.02] duration-300"
-            >
-              <i class="fa-solid fa-clock-rotate-left text-xl"></i> Divisão de
-              Locação
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="py-16 bg-gray-50 border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div
-              class="bg-white p-8 rounded-3xl shadow-sm border-t-4 border-[#003865] text-center transition hover:-translate-y-2 hover:shadow-2xl duration-300 scroll-reveal"
-            >
-              <div
-                class="w-16 h-16 mx-auto bg-blue-50 rounded-full flex items-center justify-center text-[#003865] mb-4"
-              >
-                <i class="fa-solid fa-bullseye text-2xl"></i>
-              </div>
-              <h3
-                class="text-xl font-bold text-gray-800 title-font uppercase mb-3"
-              >
-                Missão
-              </h3>
-              <p
-                class="text-gray-600 text-justify text-sm leading-relaxed font-medium"
-              >
-                Ser o canal seguro de energia para que nossos clientes cresçam e
-                prosperem sem interrupções.
-              </p>
-            </div>
-            <div
-              class="bg-white p-8 rounded-3xl shadow-sm border-t-4 border-yellow-500 text-center transition hover:-translate-y-2 hover:shadow-2xl duration-300 scroll-reveal"
-            >
-              <div
-                class="w-16 h-16 mx-auto bg-yellow-50 rounded-full flex items-center justify-center text-yellow-600 mb-4"
-              >
-                <i class="fa-solid fa-eye text-2xl"></i>
-              </div>
-              <h3
-                class="text-xl font-bold text-gray-800 title-font uppercase mb-3"
-              >
-                Visão
-              </h3>
-              <p
-                class="text-gray-600 text-justify text-sm leading-relaxed font-medium"
-              >
-                Permanecer por muitos anos como parceiro no fornecimento de
-                energia confiável para as empresas do MS.
-              </p>
-            </div>
-            <div
-              class="bg-white p-8 rounded-3xl shadow-sm border-t-4 border-[#70ab18] text-center transition hover:-translate-y-2 hover:shadow-2xl duration-300 scroll-reveal"
-            >
-              <div
-                class="w-16 h-16 mx-auto bg-green-50 rounded-full flex items-center justify-center text-[#70ab18] mb-4"
-              >
-                <i class="fa-solid fa-handshake text-2xl"></i>
-              </div>
-              <h3
-                class="text-xl font-bold text-gray-800 title-font uppercase mb-5"
-              >
-                Valores
-              </h3>
-              <ul
-                class="text-justify text-gray-600 text-sm leading-relaxed font-medium space-y-3"
-              >
-                <li class="flex items-start">
-                  <span
-                    class="text-[#70ab18] font-bold mr-2 text-lg leading-none"
-                    >•</span
-                  ><span
-                    ><strong class="text-gray-800">Confiabilidade:</strong> Há
-                    mais de 40 anos cumprindo o que promete.</span
-                  >
-                </li>
-                <li class="flex items-start">
-                  <span
-                    class="text-[#70ab18] font-bold mr-2 text-lg leading-none"
-                    >•</span
-                  ><span
-                    ><strong class="text-gray-800">Agilidade:</strong> Rapidez e
-                    solicitude quando o cliente mais precisa.</span
-                  >
-                </li>
-                <li class="flex items-start">
-                  <span
-                    class="text-[#70ab18] font-bold mr-2 text-lg leading-none"
-                    >•</span
-                  ><span
-                    ><strong class="text-gray-800">Proximidade:</strong>
-                    Atendimento próximo, de quem é daqui e conhece a realidade
-                    local.</span
-                  >
-                </li>
-                <li class="flex items-start">
-                  <span
-                    class="text-[#70ab18] font-bold mr-2 text-lg leading-none"
-                    >•</span
-                  ><span
-                    ><strong class="text-gray-800"
-                      >Responsabilidade Técnica:</strong
-                    >
-                    Equipamentos revisados e equipe qualificada com engenheiro
-                    eletricista responsável técnico registrado no CREA-MS e
-                    Corpo de Bombeiros.</span
-                  >
-                </li>
-                <li class="flex items-start">
-                  <span
-                    class="text-[#70ab18] font-bold mr-2 text-lg leading-none"
-                    >•</span
-                  ><span
-                    ><strong class="text-gray-800"
-                      >Compromisso com o Cliente:</strong
-                    >
-                    O sucesso do cliente é o nosso propósito.</span
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+    </div>
+  </section>
+</main>
 {% endblock %}
