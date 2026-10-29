@@ -42,6 +42,21 @@ document.addEventListener("DOMContentLoaded", function () {
         indiceSlideAtual = 0;
         exibirSlide(indiceSlideAtual);
         agendarProximaTroca();
+
+        // Pré-carrega slides secundários após 2s sem disputar banda com o LCP
+        setTimeout(function () {
+            document.querySelectorAll('.carousel-slide [data-bg]').forEach(function (el) {
+                const src = el.getAttribute('data-bg');
+                if (src) {
+                    const img = new Image();
+                    img.src = src;
+                    img.onload = function () {
+                        el.style.backgroundImage = `url('${src}')`;
+                        el.removeAttribute('data-bg');
+                    };
+                }
+            });
+        }, 2000);
     }
 });
 
@@ -152,8 +167,15 @@ function exibirSlide(index) {
         slide.style.zIndex = '0';
     });
 
-    slides[indiceSlideAtual].style.opacity = '1';
-    slides[indiceSlideAtual].style.zIndex = '10';
+    const slideAtivo = slides[indiceSlideAtual];
+    const lazyDiv = slideAtivo.querySelector('[data-bg]');
+    if (lazyDiv) {
+        lazyDiv.style.backgroundImage = `url('${lazyDiv.getAttribute('data-bg')}')`;
+        lazyDiv.removeAttribute('data-bg');
+    }
+
+    slideAtivo.style.opacity = '1';
+    slideAtivo.style.zIndex = '10';
 
     if (dots && dots.length > 0) {
         dots.forEach(dot => {

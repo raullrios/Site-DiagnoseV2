@@ -3,6 +3,7 @@
   rel="preload"
   as="image"
   href="{{ url_for('static', filename='img/gerador-industria.webp') }}"
+  fetchpriority="high"
 />
 {% endblock %} {% block logo_classes %}home-logo-gigante{% endblock %} {% block
 header_logo_text %}
@@ -35,11 +36,15 @@ header_logo_text %}
     <div
       class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-100"
     >
-      <!-- WEBP IMPLEMENTADO AQUI -->
-      <div
-        class="absolute inset-0 bg-cover bg-top"
-        style="background-image: url('{{ url_for('static', filename='img/gerador-industria.webp') }}');"
-      ></div>
+      <!-- IMAGEM HERO / LCP OTIMIZADA -->
+      <img
+        src="{{ url_for('static', filename='img/gerador-industria.webp') }}"
+        alt="Energia MWM para o seu Negócio - Diagnose Grupos Geradores"
+        fetchpriority="high"
+        loading="eager"
+        decoding="async"
+        class="absolute inset-0 w-full h-full object-cover object-top"
+      />
       <div
         class="absolute inset-0 bg-gradient-to-t from-[#132104]/90 via-black/20 to-transparent"
       ></div>
@@ -67,7 +72,7 @@ header_logo_text %}
     >
       <div
         class="absolute inset-0 bg-cover bg-top"
-        style="background-image: url('{{ url_for('static', filename='img/hospital-locacao.webp') }}');"
+        data-bg="{{ url_for('static', filename='img/hospital-locacao.webp') }}"
       ></div>
       <div
         class="absolute inset-0 bg-gradient-to-t from-[#436b0b]/90 via-black/20 to-transparent"

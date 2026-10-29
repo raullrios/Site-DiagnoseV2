@@ -36,14 +36,8 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='css/fonts.css') }}"
     />
-    <link rel="preconnect" href="https://cdn.tailwindcss.com" />
 
-    <!-- Otimização do LCP (Força o carregamento da 1ª imagem em WEBP) -->
-    <link
-      rel="preload"
-      as="image"
-      href="{{ url_for('static', filename='img/gerador-industria.webp') }}"
-    />
+
 
     <link
       rel="stylesheet"
@@ -121,6 +115,7 @@
               alt="Logo Diagnose"
               width="100"
               height="80"
+              decoding="async"
               class="h-full w-auto object-contain"
             />
           </div>
@@ -340,7 +335,7 @@
       </div>
     </footer>
     <script
-      src="{{ url_for('static', filename='js/script.js') }}?v=11"
+      src="{{ url_for('static', filename='js/script.js') }}?v=12"
       defer
     ></script>
   </body>
