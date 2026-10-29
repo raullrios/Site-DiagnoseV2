@@ -130,3 +130,43 @@ img, video, canvas, svg {
         animation-range: entry 10% cover 30%;
     }
 }
+
+/* ========================================================
+   SEÇÃO NOSSA EQUIPE EM AÇÃO (LOCAÇÕES)
+   ======================================================== */
+.equipe-media-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.equipe-media-item {
+    width: 100%;
+    height: 320px;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+@media (min-width: 640px) {
+    .equipe-media-item {
+        height: 360px;
+    }
+}
+
+@media (min-width: 768px) {
+    .equipe-media-grid {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    .equipe-media-item {
+        flex: 1 1 50%;
+        width: 50%;
+        max-width: 50%;
+        height: 380px;
+    }
+}
