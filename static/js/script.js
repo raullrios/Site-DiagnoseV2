@@ -301,3 +301,19 @@ window.enviarVendaWpp = function(event) {
     // Substituído pelo uso da variável global
     window.open(`https://wa.me/${NUMERO_WHATSAPP_OFICIAL}?text=${encodeURIComponent(mensagem)}`, '_blank');
 };
+
+window.preencherCotacao = function(potencia) {
+    const secaoCotacao = document.getElementById('cotacao');
+    const campoObs = document.getElementById('venda-obs');
+
+    if (campoObs) {
+        const potenciaFormatada = String(potencia).toLowerCase().includes('kva')
+            ? potencia
+            : `${potencia} kVA`;
+        campoObs.value = `Gostaria de cotar um grupo gerador na potência de ${potenciaFormatada}`;
+    }
+
+    if (secaoCotacao) {
+        secaoCotacao.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+};
