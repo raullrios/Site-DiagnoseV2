@@ -1,11 +1,11 @@
 # ⚡ Diagnose Grupos Geradores — Plataforma Comercial & Institucional
 
-[![Site Oficial](https://img.shields.io/badge/Site%20Oficial-diagnosegruposgeradores.com.br-70ab18?style=for-the-badge&logo=google-chrome&logoColor=white)](https://diagnosegruposgeradores.com.br)
+[![Site Oficial](https://img.shields.io/badge/Site%20Oficial-diagnosegeradores.com.br-70ab18?style=for-the-badge&logo=google-chrome&logoColor=white)](https://diagnosegeradores.com.br)
 [![SEO](https://img.shields.io/badge/Lighthouse%20SEO-100-brightgreen?style=for-the-badge&logo=lighthouse&logoColor=white)](#desempenho-qualidade-e-boas-pr%C3%A1ticas)
 [![Boas Práticas](https://img.shields.io/badge/Boas%20Pr%C3%A1ticas-100-brightgreen?style=for-the-badge&logo=lighthouse&logoColor=white)](#desempenho-qualidade-e-boas-pr%C3%A1ticas)
 [![Acessibilidade](https://img.shields.io/badge/Acessibilidade-95-brightgreen?style=for-the-badge&logo=lighthouse&logoColor=white)](#desempenho-qualidade-e-boas-pr%C3%A1ticas)
 
-🌐 **Website em Produção:** [https://diagnosegruposgeradores.com.br](https://diagnosegruposgeradores.com.br)
+🌐 **Website em Produção:** [https://diagnosegeradores.com.br](https://diagnosegeradores.com.br)
 
 Plataforma corporativa B2B desenvolvida para a **Diagnose Grupos Geradores**, consultora autorizada MWM com mais de 40 anos de atuação no Mato Grosso do Sul (MS). O projeto atua como o principal canal digital de captação de *leads* qualificados e apresentação do catálogo técnico de vendas e locações.
 
